@@ -1,0 +1,13 @@
+Source: hamonikr-welcome
+Section: admin
+Priority: optional
+Maintainer: HamoniKR <pkg@hamonikr.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 4.1.4
+
+Package: hamonikr-welcome
+Architecture: all
+Depends: ${misc:Depends}
+Replaces: mintwelcome, mint-translations
+Description: change mintwelcome to hamonikrwelcome
+ 민트웰컴을 하모니카웰컴으로 변경하는 패키지

@@ -1,0 +1,21 @@
+hamonikr-welcome (3.0.0) public; urgency=medium
+
+  * change release for HamoniKR 5.0
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 07 Apr 2021 17:46:22 +0900
+
+hamonikr-welcome (2.0.0) entjin; urgency=medium
+
+  * Update usr/share/linuxmint/mintwelcome/mintwelcome.ui
+    - Remove change color and layout feature
+  * Update usr/lib/linuxmint/mintwelcome/mintwelcome.py
+   - get dist_name from /etc/lsb-release
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 08 Mar 2021 16:30:47 +0900
+
+hamonikr-welcome (1.0.0) jin; urgency=medium
+
+  * first commit
+    - change mintwelcome to hamonikrwelcome
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 22 Jan 2021 11:19:09 +0900
