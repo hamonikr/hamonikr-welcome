@@ -982,7 +982,7 @@
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Panel Layout</property>
+                            <property name="label" translatable="yes">Select Theme</property>
                             <property name="xalign">0</property>
                             <attributes>
                               <attribute name="weight" value="bold"/>
@@ -999,7 +999,7 @@
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Choose your favorite layout.</property>
+                            <property name="label" translatable="yes">Choose your favorite theme.</property>
                             <property name="wrap">True</property>
                             <property name="xalign">0</property>
                           </object>
@@ -1060,7 +1060,7 @@
                                       <object class="GtkLabel">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">A small panel and a traditional window list.</property>
+                                        <property name="label" translatable="yes">It's a traditional Windows theme.</property>
                                         <property name="wrap">True</property>
                                       </object>
                                       <packing>
@@ -1120,7 +1120,7 @@
                                       <object class="GtkLabel">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">A large panel with grouped windows and a small system tray.</property>
+                                        <property name="label" translatable="yes">Windows theme with panels on top.</property>
                                         <property name="wrap">True</property>
                                       </object>
                                       <packing>
@@ -1149,7 +1149,7 @@
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Note: Cinnamon will restart after you choose a new layout. Any customization you made to the panel will be lost.</property>
+                            <property name="label" translatable="yes">Note: Cinnamon will restart after you choose a new theme. Any customization you made to the theme will be lost.</property>
                             <property name="wrap">True</property>
                           </object>
                           <packing>

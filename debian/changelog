@@ -1,4 +1,15 @@
-hamonikr-welcome (3.0.0) public; urgency=medium
+hamonikr-welcome (3.0.1) hanla; urgency=medium
+
+  * Update desktop chnager
+    - Change mintwelcome.ui
+    - Change mintwelcome.py
+    - Add hamonikr_legacy.png, hamonikr_modern.png
+    - Add Makefile po to mo code
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 31 May 2021 17:25:07 +0900
+
+
+hamonikr-welcome (3.0.0) hanla; urgency=medium
 
   * change release for HamoniKR 5.0
 

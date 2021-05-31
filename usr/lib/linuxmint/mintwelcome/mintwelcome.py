@@ -107,9 +107,8 @@ class MintWelcome():
             # Hide settings
             builder.get_object("box_first_steps").remove(builder.get_object("box_settings"))
 
-        # Hide Desktop colors and Panel layout
+        # Hide Desktop colors
         builder.get_object("box_first_steps").remove(builder.get_object("box_colors"))
-        builder.get_object("box_first_steps").remove(builder.get_object("box_cinnamon"))
 
         # Hide Cinnamon layout settings in other DEs
         if not de_is_cinnamon:
@@ -175,14 +174,14 @@ class MintWelcome():
 
         # Use HIDPI pictures if appropriate
         if scale == 1:
-            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/legacy.png", scale)
+            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/hamonikr_legacy.png", scale)
             builder.get_object("img_legacy").set_from_surface(surface)
-            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/modern.png", scale)
+            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/hamonikr_modern.png", scale)
             builder.get_object("img_modern").set_from_surface(surface)
         else:
-            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/legacy-hidpi.png", scale)
+            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/hamonikr_legacy.png", scale)
             builder.get_object("img_legacy").set_from_surface(surface)
-            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/modern-hidpi.png", scale)
+            surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/hamonikr_modern.png", scale)
             builder.get_object("img_modern").set_from_surface(surface)
 
         path = "/usr/share/linuxmint/mintwelcome/colors/"
@@ -215,6 +214,17 @@ class MintWelcome():
 
     def on_button_layout_clicked (self, button, style):
 
+        settings = Gio.Settings("org.cinnamon")
+        settings2 = Gio.Settings("org.cinnamon.desktop.interface")
+        settings3 = Gio.Settings("org.cinnamon.desktop.wm.preferences")
+        settings4 = Gio.Settings("org.cinnamon.theme")
+        settings5 = Gio.Settings("org.nemo.desktop")
+        settings6 = Gio.Settings("org.gnome.desktop.interface")
+        settings7 = Gio.Settings("org.cinnamon.desktop.background")
+        settings8 = Gio.Settings("org.gnome.desktop.background")
+        settings9 = Gio.Settings("org.mate.background")
+        settings10 = Gio.Settings("x.dm.slick-greeter")
+
         applets_legacy = ['panel1:left:0:menu@cinnamon.org',
                           'panel1:left:1:show-desktop@cinnamon.org',
                           'panel1:left:2:panel-launchers@cinnamon.org',
@@ -231,40 +241,78 @@ class MintWelcome():
                           'panel1:right:9:power@cinnamon.org',
                           'panel1:right:10:calendar@cinnamon.org']
 
-        applets_new = ['panel1:left:0:menu@cinnamon.org',
-                       'panel1:left:1:show-desktop@cinnamon.org',
-                       'panel1:left:2:grouped-window-list@cinnamon.org',
-                       'panel1:right:0:systray@cinnamon.org',
-                       'panel1:right:1:xapp-status@cinnamon.org',
-                       'panel1:right:2:notifications@cinnamon.org',
-                       'panel1:right:3:printers@cinnamon.org',
-                       'panel1:right:4:removable-drives@cinnamon.org',
-                       'panel1:right:5:keyboard@cinnamon.org',
-                       'panel1:right:6:network@cinnamon.org',
-                       'panel1:right:7:sound@cinnamon.org',
-                       'panel1:right:8:power@cinnamon.org',
-                       'panel1:right:9:calendar@cinnamon.org']
+        applets_new = ['panel1:left:0:menu@cinnamon.org:0', 
+                       'panel1:left:1:grouped-window-list@cinnamon.org:1', 
+                       'panel1:right:0:scale@cinnamon.org:2', 
+                       'panel1:right:1:expo@cinnamon.org:3', 
+                       'panel1:right:3:systray@cinnamon.org:5', 
+                       'panel1:right:4:notifications@cinnamon.org:6', 
+                       'panel1:right:5:printers@cinnamon.org:7', 
+                       'panel1:right:6:removable-drives@cinnamon.org:8', 
+                       'panel1:right:8:bluetooth@cinnamon.org:10', 
+                       'panel1:right:9:network@cinnamon.org:11', 
+                       'panel1:right:10:sound@cinnamon.org:12', 
+                       'panel1:right:11:power@cinnamon.org:13', 
+                       'panel1:right:12:calendar@cinnamon.org:14',
+                       'panel1:right:13:weather@mockturtl:15', 
+                       'panel1:right:14:show-desktop@cinnamon.org:16', 
+                       'panel1:right:15:user@cinnamon.org:17']
 
-        settings = Gio.Settings("org.cinnamon")
-        settings.set_strv("panels-enabled", ['1:0:bottom'])
+        if style == LAYOUT_STYLE_LEGACY:
+            # 패널 위치
+            settings.set_strv("panels-enabled", ['1:0:bottom'])
+
+            # 테마설정(아이콘, 컨트롤, 창테두리)
+            settings2.set_string("icon-theme", "HamoniKR")
+            settings2.set_string("gtk-theme", "HamoniKR")
+            settings3.set_string("theme", "HamoniKR")
+            settings4.set_string("name", "HamoniKR")
+
+            # 바탕화면, greeter 배경화면
+            settings7.set_string("picture-uri", "file:////usr/share/backgrounds/hamonikr/default_background.jpg")
+            settings8.set_string("picture-uri", "file:////usr/share/backgrounds/hamonikr/default_background.jpg")
+            settings9.set_string("picture-filename", "file:////usr/share/backgrounds/hamonikr/default_background.jpg")
+            settings10.set_string("background", "file:////usr/share/backgrounds/hamonikr/default_background.jpg")
+
+        elif style == LAYOUT_STYLE_NEW:
+
+            # 패널위치
+            settings.set_strv("panels-enabled", ['1:0:top'])
+            
+            # 테마설정(아이콘, 컨트롤, 창테두리)
+            settings2.set_string("icon-theme", "HamoniKR")
+            settings2.set_string("gtk-theme", "HamoniKR-light")
+            settings3.set_string("theme", "HamoniKR-light")
+            settings4.set_string("name", "HamoniKR-dark")
+
+            # 바탕화면, greeter 배경화면
+            settings7.set_string("picture-uri", "file:////usr/share/backgrounds/hamonikr/bg4.jpg")
+            settings8.set_string("picture-uri", "file:////usr/share/backgrounds/hamonikr/bg4.jpg")
+            settings9.set_string("picture-filename", "file:////usr/share/backgrounds/hamonikr/bg4.jpg")
+            settings10.set_string("background", "file:////usr/share/backgrounds/hamonikr/bg4.jpg")
 
         applets = applets_new
-        left_icon_size = 0
-        center_icon_size = 0
-        right_icon_size = 0
-        if style == LAYOUT_STYLE_LEGACY:
-            applets = applets_legacy
-            panel_size = 27
-            menu_label = "Menu"
-        elif style == LAYOUT_STYLE_NEW:
-            panel_size = 40
-            right_icon_size = 24
-            menu_label = ""
+        left_icon_size = 24
+        center_icon_size = 24
+        right_icon_size = 16
+        panel_size = 33
+        menu_label = ""
 
+        ## 패널크기
         settings.set_strv("panels-height", ['1:%s' % panel_size])
         settings.set_strv("enabled-applets", applets)
         settings.set_string("app-menu-label", menu_label)
         settings.set_string("panel-zone-icon-sizes", "[{\"panelId\": 1, \"left\": %s, \"center\": %s, \"right\": %s}]" % (left_icon_size, center_icon_size, right_icon_size))
+        settings.set_string("panel-zone-symbolic-icon-sizes", "[{\"panelId\": 1, \"left\": %s, \"center\": %s, \"right\": %s}]" % (left_icon_size, center_icon_size, right_icon_size))
+
+        ## 폰트설정
+        settings2.set_string("font-name", "나눔스퀘어라운드 10")
+        settings3.set_string("titlebar-font", "나눔스퀘어라운드 Bold 10")
+        settings5.set_string("font", "나눔스퀘어라운드 10")
+        settings6.set_string("document-font-name", "나눔스퀘어라운드 10")
+        settings6.set_string("monospace-font-name", "Droid Sans Mono 10")
+        
+
         os.system("cinnamon --replace &")
 
     def on_dark_mode_changed(self, button, state):
