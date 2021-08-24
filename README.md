@@ -10,6 +10,7 @@
 
 ![hamonikr-welcome](docs/img01.png)
 ![hamonikr-welcome](docs/img02.png)
+![hamonikr-welcome](docs/img03.png)
 
 # Install
 ```
