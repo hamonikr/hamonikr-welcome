@@ -91,6 +91,10 @@ class MintWelcome():
         builder.get_object("button_gufw").connect("clicked", self.launch, "gufw")
         builder.get_object("button_layout_legacy").connect("clicked", self.on_button_layout_clicked, LAYOUT_STYLE_LEGACY)
         builder.get_object("button_layout_new").connect("clicked", self.on_button_layout_clicked, LAYOUT_STYLE_NEW)
+        
+        # second_steps
+        builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
+        builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
 
         # Settings button depends on DE
         de_is_cinnamon = False
@@ -143,6 +147,10 @@ class MintWelcome():
         page = builder.get_object("page_first_steps")
         self.stack.add_named(page, "page_first_steps")
         list_box.add(SidebarRow(page, _("First Steps"), "dialog-information-symbolic"))
+        
+        page = builder.get_object("page_second_steps")
+        self.stack.add_named(page, "page_second_steps")
+        list_box.add(SidebarRow(page, _("Second Steps"), "dialog-information-symbolic"))
 
         page = builder.get_object("page_documentation")
         self.stack.add_named(page, "page_documentation")
