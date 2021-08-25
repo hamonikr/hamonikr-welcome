@@ -1,3 +1,12 @@
+hamonikr-welcome (3.0.3) hanla; urgency=medium
+
+  * Add Second_Steps Page
+    - add systemback installation
+    - add live-usb-creator installation
+    - add hamonikr-cli-tools installation
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 25 Aug 2021 17:30:08 +0900
+
 hamonikr-welcome (3.0.2) hanla; urgency=medium
 
   * Add Second_Steps Page

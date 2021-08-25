@@ -95,6 +95,9 @@ class MintWelcome():
         # second_steps
         builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
         builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
+        builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
+        builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
+        builder.get_object("button_hamonikr_cli_tools").connect("clicked", self.visit, "apt://hamonikr-cli-tools?refresh=yes")
 
         # Settings button depends on DE
         de_is_cinnamon = False
