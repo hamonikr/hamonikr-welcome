@@ -1,3 +1,10 @@
+hamonikr-welcome (3.0.5) hanla; urgency=medium
+
+  * Change the way hamonikr changes the theme.
+    - If theme change fix hamonikr-themes package
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 26 Aug 2021 12:16:02 +0900
+
 hamonikr-welcome (3.0.4) hanla; urgency=medium
 
   * Change hamonikr-cli-tools icon
