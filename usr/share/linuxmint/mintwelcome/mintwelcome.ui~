@@ -2949,7 +2949,7 @@
                             <property name="can_focus">False</property>
                             <property name="halign">center</property>
                             <property name="pixel_size">48</property>
-                            <property name="icon_name">hamonikr-cli-tools_default</property>
+                            <property name="icon_name">terminal</property>
                             <property name="icon_size">6</property>
                           </object>
                           <packing>

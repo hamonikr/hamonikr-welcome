@@ -1,3 +1,9 @@
+hamonikr-welcome (3.0.4) hanla; urgency=medium
+
+  * Change hamonikr-cli-tools icon
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 26 Aug 2021 10:45:09 +0900
+
 hamonikr-welcome (3.0.3) hanla; urgency=medium
 
   * Add Second_Steps Page
