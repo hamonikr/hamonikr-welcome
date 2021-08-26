@@ -1,3 +1,9 @@
+hamonikr-welcome (3.0.6) hanla; urgency=medium
+
+  * fix hoffice hangle key
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 26 Aug 2021 16:12:59 +0900
+
 hamonikr-welcome (3.0.5) hanla; urgency=medium
 
   * Change the way hamonikr changes the theme.

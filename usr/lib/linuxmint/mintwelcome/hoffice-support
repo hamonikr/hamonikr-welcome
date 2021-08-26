@@ -12,7 +12,6 @@ if [ ! -z "$CHECK" ]; then
 else
     INSTALL="https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb"
 
-    gnome-terminal -- /bin/bash -c 'echo "설치를 시작합니다 잠시만 기다려주세요."; sleep 3; wget -P /tmp/ --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb; dpkg -i /tmp/hoffice_11.20.0.1520_amd64.deb; echo "설치가 완료되었습니다. 자동으로 창이 닫힙니다."; sleep 3; exit 0; read'
+    gnome-terminal -- /bin/bash -c 'echo "설치를 시작합니다 잠시만 기다려주세요."; sleep 3; wget -P /tmp/ --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb; dpkg -i /tmp/hoffice_11.20.0.1520_amd64.deb; rm -r /opt/hnc/hoffice11/Bin/qt; rm /tmp/hoffice_*; echo "설치가 완료되었습니다. 자동으로 창이 닫힙니다."; sleep 3; exit 0; read'
 
-    rm /tmp/hoffice_11.20.0.1520_amd64.deb
 fi
