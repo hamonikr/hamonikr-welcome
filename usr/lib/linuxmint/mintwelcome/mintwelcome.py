@@ -78,7 +78,7 @@ class MintWelcome():
 
         # Action buttons
         builder.get_object("button_forums").connect("clicked", self.visit, "https://hamonikr.org")
-        builder.get_object("button_documentation").connect("clicked", self.visit, "https://hamonikr.org/board_manual")
+        # builder.get_object("button_documentation").connect("clicked", self.visit, "https://hamonikr.org/board_manual")
         builder.get_object("button_contribute").connect("clicked", self.visit, "https://github.com/hamonikr")
         builder.get_object("button_irc").connect("clicked", self.visit, "https://hamonikr.org/how_join")
         builder.get_object("button_codecs").connect("clicked", self.visit, "apt://mint-meta-codecs?refresh=yes")
@@ -92,12 +92,20 @@ class MintWelcome():
         builder.get_object("button_layout_legacy").connect("clicked", self.on_button_layout_clicked, LAYOUT_STYLE_LEGACY)
         builder.get_object("button_layout_new").connect("clicked", self.on_button_layout_clicked, LAYOUT_STYLE_NEW)
         
-        # second_steps
+        # custom new features
+        builder.get_object("button_license").connect("clicked", self.visit, "http://pms.invesume.com:8090/hl/os/5-0")
+
+        # custom recommended software
         builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
-        builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
-        builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
-        builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
-        builder.get_object("button_hamonikr_cli_tools").connect("clicked", self.visit, "apt://hamonikr-cli-tools?refresh=yes")
+        builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
+
+        # custom help
+        builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr")
+
+        # builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
+        # builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
+        # builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
+        # builder.get_object("button_hamonikr_cli_tools").connect("clicked", self.visit, "apt://hamonikr-cli-tools?refresh=yes")
 
         # Settings button depends on DE
         de_is_cinnamon = False
@@ -147,17 +155,17 @@ class MintWelcome():
         list_box.add(SidebarRow(page, _("Welcome"), "go-home-symbolic"))
         self.stack.set_visible_child(page)
 
+        page = builder.get_object("page_new_feature")
+        self.stack.add_named(page, "page_new_feature")
+        list_box.add(SidebarRow(page, _("New Features"), "accessories-dictionary-symbolic"))
+
         page = builder.get_object("page_first_steps")
         self.stack.add_named(page, "page_first_steps")
-        list_box.add(SidebarRow(page, _("First Steps"), "dialog-information-symbolic"))
+        list_box.add(SidebarRow(page, _("HamoniKR Settings"), "dialog-information-symbolic"))
         
         page = builder.get_object("page_second_steps")
         self.stack.add_named(page, "page_second_steps")
-        list_box.add(SidebarRow(page, _("Second Steps"), "dialog-information-symbolic"))
-
-        page = builder.get_object("page_documentation")
-        self.stack.add_named(page, "page_documentation")
-        list_box.add(SidebarRow(page, _("Documentation"), "accessories-dictionary-symbolic"))
+        list_box.add(SidebarRow(page, _("Recommended software"), "dialog-information-symbolic"))
 
         page = builder.get_object("page_help")
         self.stack.add_named(page, "page_help")
@@ -373,6 +381,9 @@ class MintWelcome():
 
     def launch(self, button, command):
         subprocess.Popen([command])
+
+    def launch2(self, button, command, command2):
+        subprocess.Popen([command, command2])
 
     def pkexec(self, button, command):
         subprocess.Popen(["pkexec", command])

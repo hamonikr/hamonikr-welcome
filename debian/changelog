@@ -1,3 +1,9 @@
+hamonikr-welcome (3.0.7) hanla; urgency=medium
+
+  * Change mintwelcome
+
+ -- HamoniKR <pkg@hamonikr.org> Tue, 14 Sep 2021 12:02:59 +0900
+
 hamonikr-welcome (3.0.6) hanla; urgency=medium
 
   * fix hoffice hangle key
