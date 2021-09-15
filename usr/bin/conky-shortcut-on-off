@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CHECK=$(ps -ef | grep "conky -c /home/hamonikr/.conky/hamonikr/banner" | grep -v "grep" | awk 'FNR {print $2}')
+
+if [ "$CHECK" = "" ]; then
+    cd $HOME/.conky/hamonikr
+    conky -c "$HOME/.conky/hamonikr/banner" &
+else
+    kill -9 $(ps -ef | grep "conky -c /home/hamonikr/.conky/hamonikr/banner" | grep -v "grep" | awk 'FNR {print $2}')
+fi

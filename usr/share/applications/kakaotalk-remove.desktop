@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=kakaotalk-remove
+Name[ko]=카카오톡 제거
+Comment=kakaotalk-remove
+Comment[ko]=카카오톡 제거
+Icon=kakaotalk-remove
+Exec=kakaotalk-remove
+Terminal=true
+NoDisplay=true

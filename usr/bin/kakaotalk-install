@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gnome-terminal -- /bin/bash -c 'pkexec "/usr/lib/linuxmint/mintwelcome/kakaotalk-install" "$@"'

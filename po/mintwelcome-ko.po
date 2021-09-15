@@ -322,6 +322,12 @@ msgstr "하모니카 도움말"
 msgid "The HamoniKR help site provides wats to solve various problems. You can move to the site by pressing the Launch button or press F1 to check."
 msgstr "하모니카 도움말 사이트는 다양한 문제를 해결할 수 있는 방법을 제공하고 있습니다. 실행 버튼을 눌러 사이트를 이동하거나 F1 키를 눌러서 확인하실 수 있습니다."
 
+msgid "Shortcut Keys"
+msgstr "바로가기 키"
+
+msgid "Try the shortcut key in the HamoniKR. It's very useful. Also make your own custom shortcut key. If you press Lanuch button, you can check the default shortcut key. Press again to exit"
+msgstr "하모니카에서 바로가기 키를 사용해 보세요. 매우 유용합니다. 또한 바로가기 키를 직접 만들 수 있습니다. 실행 버튼을 누르면 기본 바로가기 키를 확인할 수 있습니다. 종료하려면 다시 누르세요."
+
 msgid "Remove"
 msgstr "제거"
 
