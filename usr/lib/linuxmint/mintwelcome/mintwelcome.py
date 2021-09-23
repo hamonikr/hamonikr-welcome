@@ -99,6 +99,7 @@ class MintWelcome():
         builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
         builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "kakaotalk-install")
+        builder.get_object("button_hamonikr_drive").connect("clicked", self.visit, "https://drive.hamonikr.org/")
 
         # custom help
         builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr")

@@ -1,10 +1,15 @@
+hamonikr-welcome (3.0.9) hanla; urgency=medium
+
+  * Add hamonikr-drive & fix translate
+
+ -- HamoniKR <pkg@hamonikr.org> Thu, 23 Sep 2021 10:31:19 +0900
+ 
 hamonikr-welcome (3.0.8) hanla; urgency=medium
 
   * Add KakaoTalk Install
   * Add conky-shortcut-on-off
 
  -- HamoniKR <pkg@hamonikr.org> Wed, 15 Sep 2021 18:26:37 +0900
-
 
 hamonikr-welcome (3.0.7) hanla; urgency=medium
 
