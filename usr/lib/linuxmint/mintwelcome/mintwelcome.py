@@ -101,6 +101,13 @@ class MintWelcome():
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "kakaotalk-install")
         builder.get_object("button_hamonikr_drive").connect("clicked", self.visit, "https://drive.hamonikr.org/")
 
+        # development software
+        builder.get_object("button_vscode").connect("clicked", self.visit, "apt://code?refresh=yes")
+        builder.get_object("button_default_jdk").connect("clicked", self.visit, "apt://default-jdk?refresh=yes")
+        builder.get_object("button_git").connect("clicked", self.visit, "apt://git?refresh=yes")
+        builder.get_object("button_rabbitvcs").connect("clicked", self.visit, "apt://hamonikr-nemo-rabbitvcs?refresh=yes")
+        builder.get_object("button_avahi").connect("clicked", self.visit, "apt://hamonikr-avahi-service?refresh=yes")
+
         # custom help
         builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr")
         builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
@@ -169,6 +176,10 @@ class MintWelcome():
         page = builder.get_object("page_second_steps")
         self.stack.add_named(page, "page_second_steps")
         list_box.add(SidebarRow(page, _("Recommended software"), "dialog-information-symbolic"))
+
+        page = builder.get_object("page_third_steps")
+        self.stack.add_named(page, "page_third_steps")
+        list_box.add(SidebarRow(page, _("Development software"), "dialog-information-symbolic"))
 
         page = builder.get_object("page_help")
         self.stack.add_named(page, "page_help")

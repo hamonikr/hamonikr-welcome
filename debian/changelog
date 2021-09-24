@@ -1,3 +1,9 @@
+hamonikr-welcome (3.1.1) hanla; urgency=medium
+
+  * Add development software tab & install software (vscode, default-jdk, git, hamonikr-nemo-rabbitvcs, hamonikr-avahi-service)
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 24 Sep 2021 15:00:41 +0900
+
 hamonikr-welcome (3.1.0) hanla; urgency=medium
 
   * Change theme select image
