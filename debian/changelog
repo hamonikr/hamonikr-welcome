@@ -1,3 +1,12 @@
+hamonikr-welcome (3.1.2) hanla; urgency=medium
+
+  * Change the order of the list.
+  * Integrated list
+  * Fix the installl program
+  * Check if the network (Internet) is connected code.
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 30 Sep 2021 10:04:21 +0900
+
 hamonikr-welcome (3.1.1) hanla; urgency=medium
 
   * Add development software tab & install software (vscode, default-jdk, git, hamonikr-nemo-rabbitvcs, hamonikr-avahi-service)

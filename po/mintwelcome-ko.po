@@ -307,8 +307,8 @@ msgstr "국내 최대의 오픈소스 커뮤니티 하모니카(https://hamonikr
 msgid "HamoniKR Settings"
 msgstr "하모니카 설정"
 
-msgid "Recommended software"
-msgstr "추천 소프트웨어"
+msgid "Recommended Program"
+msgstr "추천 프로그램"
 
 msgid "Package License"
 msgstr "패키지 라이선스"
@@ -394,10 +394,11 @@ msgstr "Avahi Service"
 msgid "Avahi is a system which enables programs to publish and discover services and hosts running on a local network. This package is a package that enables clients to browse services even if they do not know IP."
 msgstr "Avahi는 프로그램이 로컬 네트워크에서 실행되는 서비스와 호스트를 게시하고 검색할 수 있도록 하는 시스템입니다. 이 패키지는 클라이언트가 IP를 모르더라도 서비스를 찾아볼 수 있도록 하는 패키지 입니다."
 
-msgid "Development software"
-msgstr "개발자용 소프트웨어"
+msgid "Development Program"
+msgstr "개발자용 프로그램"
 
-
+msgid "HamoniKR Information"
+msgstr "하모니카 정보"
 
 
 

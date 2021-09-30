@@ -165,29 +165,25 @@ class MintWelcome():
         list_box.add(SidebarRow(page, _("Welcome"), "go-home-symbolic"))
         self.stack.set_visible_child(page)
 
-        page = builder.get_object("page_new_feature")
-        self.stack.add_named(page, "page_new_feature")
-        list_box.add(SidebarRow(page, _("New Features"), "accessories-dictionary-symbolic"))
-
         page = builder.get_object("page_first_steps")
         self.stack.add_named(page, "page_first_steps")
         list_box.add(SidebarRow(page, _("HamoniKR Settings"), "dialog-information-symbolic"))
         
         page = builder.get_object("page_second_steps")
         self.stack.add_named(page, "page_second_steps")
-        list_box.add(SidebarRow(page, _("Recommended software"), "dialog-information-symbolic"))
+        list_box.add(SidebarRow(page, _("Recommended Program"), "dialog-information-symbolic"))
 
         page = builder.get_object("page_third_steps")
         self.stack.add_named(page, "page_third_steps")
-        list_box.add(SidebarRow(page, _("Development software"), "dialog-information-symbolic"))
+        list_box.add(SidebarRow(page, _("Development Program"), "dialog-information-symbolic"))
 
         page = builder.get_object("page_help")
         self.stack.add_named(page, "page_help")
         list_box.add(SidebarRow(page, _("Help"), "help-browser-symbolic"))
 
-        page = builder.get_object("page_contribute")
-        self.stack.add_named(page, "page_contribute")
-        list_box.add(SidebarRow(page, _("Contribute"), "starred-symbolic"))
+        page = builder.get_object("page_new_feature")
+        self.stack.add_named(page, "page_new_feature")
+        list_box.add(SidebarRow(page, _("HamoniKR Information"), "accessories-dictionary-symbolic"))
 
         list_box.connect("row-activated", self.sidebar_row_selected_cb)
 

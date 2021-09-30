@@ -3,7 +3,27 @@
 RUID=$(who | awk 'FNR == 1 {print $1}')
 echo "$RUID"
 
+# 인터넷 연결상태 확인
+nslookup www.google.com | grep authoritative > /dev/null 2>&1
+if [[ $? != 0 ]]; then
+    zenity --info --width 200 --text "인터넷 연결상태를 확인해주세요"
+    exit 0
+fi
+
+ # 중복 실행 방지
+if [ -f /tmp/kakaotalkworking ]; then
+  zenity --info --width 200 --text "인스톨러가 실행중입니다."
+  exit 0
+else
+  touch /tmp/kakaotalkworking
+fi
+
+# 강제 종료 되거나 작업 완료 되었을때 진행
+trap 'rm /tmp/kakaotalkworking' EXIT
+
+# 설치
 if [ ! -d "/home/$RUID/.wine" ]; then
+
   # 32비트 아키텍처 지원 설정
   dpkg --add-architecture i386
 
@@ -32,6 +52,7 @@ if [ ! -d "/home/$RUID/.wine" ]; then
   sudo -u $RUID wine /tmp/KakaoTalk_Setup.exe
 
   sed -i 's/NoDisplay=true/NoDisplay=false/g' /usr/share/applications/kakaotalk-remove.desktop
+
 else
 
   zenity --info --width 300 --text "재설치가 필요하면\n/home/$RUID/.wine\n디렉토리를 제거해주세요\nsudo rm -r /home/$RUID/.wine\n또는 시작메뉴 > 기타 > 카카오톡 제거를 실행해주세요"
@@ -39,3 +60,4 @@ else
   sed -i 's/NoDisplay=true/NoDisplay=false/g' /usr/share/applications/kakaotalk-remove.desktop
   
 fi
+

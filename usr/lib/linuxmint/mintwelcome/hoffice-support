@@ -4,14 +4,66 @@
 
 CHECK=$(dpkg -l | grep hoffice)
 
+CHECK_iHR=$(dpkg -l | grep hoffice | grep -o iHR)
+
+# 깨진 패키지 제거
+if [ "$CHECK_iHR" = "iHR" ]; then
+    dpkg --configure -a
+    dpkg --remove --force-remove-reinstreq hoffice
+fi
+
+# 설치
 if [ ! -z "$CHECK" ]; then
     
-    zenity --info --width 200 --text "hoffice is already installed!"
+    zenity --info --width 200 --text "hoffice가 이미 설치되어 있습니다."
     exit 0
 
 else
-    INSTALL="https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb"
 
-    gnome-terminal -- /bin/bash -c 'echo "설치를 시작합니다 잠시만 기다려주세요."; sleep 3; wget -P /tmp/ --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb; dpkg -i /tmp/hoffice_11.20.0.1520_amd64.deb; rm -r /opt/hnc/hoffice11/Bin/qt; rm /tmp/hoffice_*; echo "설치가 완료되었습니다. 자동으로 창이 닫힙니다."; sleep 3; exit 0; read'
+    # 중복 실행 방지
+    if [ -f /tmp/hofficeworking ]; then
+        zenity --info --width 200 --text "인스톨러가 실행중입니다.\n중간에 종료했을 경우\n제거 후 다시 설치해주세요."
+        exit 0
+    else
+        touch /tmp/hofficeworking
+    fi
+
+    # 강제 종료 되거나 작업 완료 되었을때 진행
+    trap 'rm /tmp/hofficeworking' EXIT
+
+
+    # 인터넷 연결상태 확인
+    nslookup www.google.com | grep authoritative > /dev/null 2>&1
+    if [[ $? != 0 ]]; then
+        zenity --info --width 200 --text "인터넷 연결상태를 확인해주세요"
+        exit 0
+    fi
+
+    # 파일 존재 유무 확인(원격지 저장소에 있는)
+    REPO_CHECK=$(wget -S --spider --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb 2>&1 | grep "Content-Type" | grep "application")
+    if [[ -z $REPO_CHECK ]]; then
+        zenity --info --width 200 --text "다운로드 저장소에 문제가 있거나 파일이 존재하지 않습니다."
+        exit 0
+    fi
+
+    rm -r /tmp/hoffice_11.20.0.1520_amd64.deb
+
+    gnome-terminal --wait -- /bin/bash -c 'echo "패키지를 다운로드 중입니다. 잠시만 기다려주세요."; sleep 3; wget -P /tmp/ --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb; echo "다운로드가 완료되었습니다." ; sleep 3; exit 0; read'
+
+    # 파일 체크섬 확인
+    CHECKSUM=$(md5sum /tmp/hoffice_11.20.0.1520_amd64.deb | awk '{ print $1 }')
+    if [ "$CHECKSUM" != "abbb954836ed930623394dd533ab899c"]; then
+        zenity --info --width 200 --text "체크섬이 올바르지 않습니다. 다시 다운로드 받아주세요."
+        exit 0
+    fi
+
+    gnome-terminal --wait -- /bin/bash -c 'echo "설치를 시작합니다 잠시만 기다려주세요."; sleep 3; dpkg -i /tmp/hoffice_11.20.0.1520_amd64.deb; echo "설치가 완료되었습니다. 자동으로 창이 닫힙니다."; sleep 3; exit 0; read'
+
+    # 한글 입력을 위한 nimf.so 파일 복사
+    cp -r /usr/lib/linuxmint/mintwelcome/libqt5im-nimf.so /opt/hnc/hoffice11/Bin/qt/plugins/platforminputcontexts/libqt5im-nimf.so
+
+    # 작업 완료 후 파일 제거
+    rm /tmp/hoffice_*
 
 fi
+
