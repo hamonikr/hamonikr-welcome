@@ -37,16 +37,12 @@ apt-get install -y libnss3-tools ethtool dmidecode hdparm cpuid libgnome-autoar-
 wget -P /tmp/ http://pkg.hamonikr.org/site-compatibility-support.tar.xz; \
 tar -xvf /tmp/site-compatibility-support.tar.xz -C /tmp/; \
 dpkg -i /tmp/site-compatibility-support/*.deb; \
+touch /home/$RUID/.hamonikr/scsinstalled; \
 echo '설치가 완료되었습니다. 재부팅이 필요합니다. 자동으로 창이 닫힙니다.'; sleep 3; exit 0; read"
 
   # 부팅 autostart 파일 복사와 권한 변경
   cp -r /tmp/site-compatibility-support/autostart/*.desktop /home/$RUID/.config/autostart/
   chown $RUID:$RUID /home/$RUID/.config/autostart/*.desktop
 
-  # 작업 완료 후 파일 제거
-  rm -r /tmp/site-compatibility-support*
-
-  # 설치가 됬다는 내용 확인
-  touch /home/$RUID/.hamonikr/scsinstalled
 
 fi
