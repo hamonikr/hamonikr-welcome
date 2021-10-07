@@ -400,7 +400,11 @@ msgstr "개발자용 프로그램"
 msgid "HamoniKR Information"
 msgstr "하모니카 정보"
 
+msgid "Lutris"
+msgstr "루트리스"
 
+msgid "Lutris is an Open Source gaming platform for Linux. You can install game and other window program."
+msgstr "루트리스는 리눅스에서 윈도우 프로그램을 간단하게 설치, 실행할 수 있도록 도와주는 와인 기반 오픈소스 프로그램 입니다."
 
 #~ msgid "Visit the forums"
 #~ msgstr "포럼 방문하기"

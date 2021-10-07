@@ -101,6 +101,8 @@ class MintWelcome():
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "kakaotalk-install")
         builder.get_object("button_hamonikr_drive").connect("clicked", self.visit, "https://drive.hamonikr.org/")
 
+        builder.get_object("button_lutris").connect("clicked", self.on_button_lutris_clicked)
+        
         # development software
         builder.get_object("button_vscode").connect("clicked", self.visit, "apt://code?refresh=yes")
         builder.get_object("button_default_jdk").connect("clicked", self.visit, "apt://default-jdk?refresh=yes")
@@ -397,6 +399,11 @@ class MintWelcome():
 
     def pkexec(self, button, command):
         subprocess.Popen(["pkexec", command])
+
+    def on_button_lutris_clicked (self, button):
+        process = subprocess.Popen(["pkexec","add-apt-repository","-y","ppa:lutris-team/lutris"])
+        process.wait()
+        subprocess.Popen(["xdg-open","apt://lutris?refresh=yes"])
 
 if __name__ == "__main__":
     MintWelcome()

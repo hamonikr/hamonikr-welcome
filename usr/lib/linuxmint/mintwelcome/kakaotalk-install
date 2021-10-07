@@ -10,7 +10,7 @@ if [[ $? != 0 ]]; then
     exit 0
 fi
 
- # 중복 실행 방지
+# 중복 실행 방지
 if [ -f /tmp/kakaotalkworking ]; then
   zenity --info --width 200 --text "인스톨러가 실행중입니다."
   exit 0
@@ -21,43 +21,35 @@ fi
 # 강제 종료 되거나 작업 완료 되었을때 진행
 trap 'rm /tmp/kakaotalkworking' EXIT
 
-# 설치
-if [ ! -d "/home/$RUID/.wine" ]; then
+# lutris 설치 확인
+CHECK=$(dpkg -l | grep lutris)
+CHECK_iHR=$(dpkg -l | grep lutris | grep -o iHR)
 
-  # 32비트 아키텍처 지원 설정
-  dpkg --add-architecture i386
-
-  # 공식 wine 저장소 공개키 추가
-  wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-
-  # wine 저장소 추가
-  apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu focal main"
-
-  # wine 설치
-  apt update && sudo apt install --install-recommends winehq-stable -y
-
-  # winetricks 설치
-  apt install winetricks -y
-
-  # wine 환경설정
-  sudo -u $RUID WINEPREFIX=/home/$RUID/.wine WINEARCH=win32 winetricks win10
-
-  # 님프 키보드 중복 입력 Fix 레지스트리 등록
-  sudo -u $RUID regedit /usr/lib/linuxmint/mintwelcome/kakaotalk-keybugfix.reg
-
-  # 카톡 다운로드
-  wget http://app.pc.kakao.com/talk/win32/KakaoTalk_Setup.exe -P /tmp
-
-  # 설치
-  sudo -u $RUID wine /tmp/KakaoTalk_Setup.exe
-
-  sed -i 's/NoDisplay=true/NoDisplay=false/g' /usr/share/applications/kakaotalk-remove.desktop
-
-else
-
-  zenity --info --width 300 --text "재설치가 필요하면\n/home/$RUID/.wine\n디렉토리를 제거해주세요\nsudo rm -r /home/$RUID/.wine\n또는 시작메뉴 > 기타 > 카카오톡 제거를 실행해주세요"
-
-  sed -i 's/NoDisplay=true/NoDisplay=false/g' /usr/share/applications/kakaotalk-remove.desktop
-  
+if [ ! -z "$CHECK_iHR" ]; then
+  zenity --info --width 300 --text "lutris 패키지가 정상적이지 않습니다.\n다시 설치해주세요"
+  dpkg --configure -a
+  dpkg --remove --force-remove-reinstreq lutris
+  exit 0
 fi
 
+if [ ! -z "$CHECK" ]; then
+  # lutris 에서 설치
+  if [ -d "/home/$RUID/Games/kakaotalk" ]; then
+    zenity --info --width 350 --text "이미 설치되어 있습니다.\n/home/$RUID/Games/kakaotalk\n폴더를 제거하고 다시 실행해주세요"
+    exit 0
+  else
+    sudo -u $RUID /usr/games/lutris -i /usr/lib/linuxmint/mintwelcome/KakaoTalk.yml
+  fi
+else
+
+  if zenity --question --width 350 --text="카카오톡을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?"; then
+    
+    gnome-terminal --wait -- /bin/bash -c 'echo "패키지를 설치중입니다.. 잠시만 기다려주세요."; sleep 3; sudo add-apt-repository -y ppa:lutris-team/lutris; sudo apt update; sudo apt install -y lutris; echo "설치가 완료되었습니다." ; sleep 3; exit 0; read'
+
+    sudo -u $RUID /usr/games/lutris -i /usr/lib/linuxmint/mintwelcome/KakaoTalk.yml
+
+  else
+    # 설치 취소
+    exit 0;
+  fi
+fi
