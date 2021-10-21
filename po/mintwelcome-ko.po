@@ -406,6 +406,22 @@ msgstr "루트리스"
 msgid "Lutris is an Open Source gaming platform for Linux. You can install game and other window program."
 msgstr "루트리스는 리눅스에서 윈도우 프로그램을 간단하게 설치, 실행할 수 있도록 도와주는 와인 기반 오픈소스 프로그램 입니다."
 
+msgid "Asbru-cm (SSH Client)"
+msgstr "Asbru-cm (SSH Client)"
+
+msgid "Asbru Connection Manager is a user interface that helps organizing remote terminal sessions and automating repetitive tasks."
+msgstr "Asbru-cm (SSH Client)연결 관리자는 원격 터미널 세션을 구성하고 반복 작업을 자동화하는데 도움을 주는 프로그램입니다."
+
+msgid "KODI"
+msgstr "코디"
+
+msgid "Kodi is a free and open-source media player software application developed by the XBMC Foundation, a non-profit technology consortium."
+msgstr "코디는 비영리 기술 컨소시엄인 XBMC 재단이 개발한 자유-오픈 소스 미디어 플레이어 응용 소프트웨어입니다. 다양한 영상을 보거나 애드온을 연결해서 사용해보세요."
+
+msgid "Korean Language"
+msgstr "한국어 설정"
+
+
 #~ msgid "Visit the forums"
 #~ msgstr "포럼 방문하기"
 

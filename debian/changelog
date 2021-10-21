@@ -1,3 +1,22 @@
+hamonikr-welcome (3.1.9) hanla; urgency=medium
+
+  * Add install Asbru-cm
+  * Add install Kodi
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 20 Oct 2021 16:27:27 +0900
+
+hamonikr-welcome (3.1.8) hanla; urgency=medium
+
+  * Update release note link
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 12 Oct 2021 10:16:57 +0900
+
+hamonikr-welcome (3.1.7) hanla; urgency=medium
+
+  * Fix lutris Wine version
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 08 Oct 2021 14:04:56 +0900
+
 hamonikr-welcome (3.1.6) hanla; urgency=medium
 
   * Change kakaotalk install

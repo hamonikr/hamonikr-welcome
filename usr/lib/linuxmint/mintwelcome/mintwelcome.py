@@ -82,8 +82,8 @@ class MintWelcome():
         builder.get_object("button_contribute").connect("clicked", self.visit, "https://github.com/hamonikr")
         builder.get_object("button_irc").connect("clicked", self.visit, "https://hamonikr.org/how_join")
         builder.get_object("button_codecs").connect("clicked", self.visit, "apt://mint-meta-codecs?refresh=yes")
-        builder.get_object("button_new_features").connect("clicked", self.visit, "https://hamonikr.org/menuDownload_JIN")
-        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://hamonikr.org/index.php?mid=hamoni_board&document_srl=82993")
+        builder.get_object("button_new_features").connect("clicked", self.visit, "https://hamonikr.org/download_HANLA")
+        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://hamonikr.org/hamoni_board/103996")
         builder.get_object("button_mintupdate").connect("clicked", self.launch, "mintupdate")
         builder.get_object("button_mintinstall").connect("clicked", self.launch, "mintinstall")
         builder.get_object("button_timeshift").connect("clicked", self.pkexec, "timeshift-gtk")
@@ -100,15 +100,18 @@ class MintWelcome():
         builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "kakaotalk-install")
         builder.get_object("button_hamonikr_drive").connect("clicked", self.visit, "https://drive.hamonikr.org/")
-
         builder.get_object("button_lutris").connect("clicked", self.on_button_lutris_clicked)
+        builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
+        builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
         
         # development software
-        builder.get_object("button_vscode").connect("clicked", self.visit, "apt://code?refresh=yes")
+        # builder.get_object("button_vscode").connect("clicked", self.visit, "apt://code?refresh=yes")
+        builder.get_object("button_vscode").connect("clicked", self.on_button_vscode_clicked)
         builder.get_object("button_default_jdk").connect("clicked", self.visit, "apt://default-jdk?refresh=yes")
         builder.get_object("button_git").connect("clicked", self.visit, "apt://git?refresh=yes")
         builder.get_object("button_rabbitvcs").connect("clicked", self.visit, "apt://hamonikr-nemo-rabbitvcs?refresh=yes")
         builder.get_object("button_avahi").connect("clicked", self.visit, "apt://hamonikr-avahi-service?refresh=yes")
+        builder.get_object("button_asbru").connect("clicked", self.visit, "apt://asbru-cm?refresh=yes")
 
         # custom help
         builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr")
@@ -401,9 +404,16 @@ class MintWelcome():
         subprocess.Popen(["pkexec", command])
 
     def on_button_lutris_clicked (self, button):
-        process = subprocess.Popen(["pkexec","add-apt-repository","-y","ppa:lutris-team/lutris"])
-        process.wait()
-        subprocess.Popen(["xdg-open","apt://lutris?refresh=yes"])
+        os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris' && xdg-open apt://lutris?refresh=yes")
+
+    def on_button_vscode_clicked (self, button):
+        os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && xdg-open apt://code?refresh=yes")
+    
+    def on_button_kodi_clicked (self, button):
+        os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y' && xdg-open apt://kodi?refresh=yes")
+
+    def on_button_korean_language (self, button):
+        os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")
 
 if __name__ == "__main__":
     MintWelcome()
