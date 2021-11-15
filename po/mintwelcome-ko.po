@@ -364,17 +364,77 @@ msgstr "하모니카 드라이브"
 msgid "Try using the HamoniKR drive. You can save and use 2GB of data. You can link your account in the system settings."
 msgstr "하모니카 클라우드를 사용해보세요. 2GB의 자료를 저장하고 사용하실 수 있습니다. 제어판에서 계정을 연동시킬 수 있습니다."
 
+msgid "Editor(IDE)"
+msgstr "Editor(IDE)"
+
+msgid "It is an integrated development environment tool."
+msgstr "통합 개발 환경 도구 입니다."
+
 msgid "Visual Studio Code"
 msgstr "비주얼 스튜디오 코드"
 
 msgid "Visual Studio Code is a source-code editor that can be used with a variety of programming languages."
 msgstr "비주얼 스튜디오 코드는 다양한 프로그래밍 언어와 함께 사용할 수 있는 소스 코드 편집기 입니다."
 
+msgid "DBMS"
+msgstr "DBMS"
+
+msgid "Try using various database management systems."
+msgstr "다양한 데이터베이스 관리 시스템을 사용해 보십시오."
+
+msgid "MySQL"
+msgstr "MySQL"
+
+msgid "MySQL is an open-source relational database management system (RDBMS)."
+msgstr "MySQL은 RDBMS(오픈 소스 관계형 데이터베이스 관리 시스템)입니다"
+
+msgid "PostgreSQL"
+msgstr "PostgreSQL"
+
+msgid "PostgreSQL also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance."
+msgstr "PostgreSQL은 확장성과 SQL 표준 준수를 강조하는 자유-오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다."
+
+msgid "WEB/WAS"
+msgstr "WEB/WAS"
+
+msgid "Try to build WEB and WAS servers for web services."
+msgstr "웹 서비스를 위한 WEB, WAS 서버 구축을 해보세요."
+
+msgid "Apache"
+msgstr "아파치"
+
+msgid "The Apache HTTP Server, colloquially called Apache is a free and open-source cross-platform web server software, released under the terms of Apache License 2.0."
+msgstr "아파치 HTTP 서버(Apache HTTP Server)는 아파치 라이선스 2.0의 조항에 따라 출시된 자유-오픈 소스 크로스 플랫폼 웹 서버 소프트웨어입니다. 웹 환경을 구축하기 위해 필요합니다."
+
+msgid "Tomcat"
+msgstr "톰캣"
+
+msgid "Apache Tomcat is a web application server with only servlet containers developed by the Apache Software Foundation."
+msgstr "아파치 톰캣은 아파치 소프트웨어 재단에서 개발한 서블릿 컨테이너만 있는 웹 애플리케이션 서버이다."
+
+msgid "Development Language"
+msgstr "Development Language"
+
+msgid "Install packages related to the development language and proceed with additional settings."
+msgstr "개발 언어와 관련된 패키지를 설치하고 추가 설정을 진행합니다."
+
 msgid "default-jdk"
 msgstr "default-jdk"
 
 msgid "Standard Java or Java compatible Development Kit"
 msgstr "표준 Java 또는 Java 호환 개발 키트 입니다."
+
+msgid "Python-pip"
+msgstr "Python-pip"
+
+msgid "python3.8 is already installed in the HamoniKR. However, you need to make addiional settings to use the pip command at the terminal. We recommend using the IDE tool."
+msgstr "python3.8은 이미 HamoniKR에 설치되어 있습니다. 하지만 터미널에서 pip 명령을 사용하려면 추가 설정을 해야 합니다. IDE 도구 사용을 권장합니다."
+
+msgid "Etc.."
+msgstr "기타.."
+
+msgid "These are very useful tools that can be used for development."
+msgstr "개발할 때 사용할 수 있는 매우 유용한 추가 도구입니다."
 
 msgid "git"
 msgstr "깃"
@@ -420,6 +480,13 @@ msgstr "코디는 비영리 기술 컨소시엄인 XBMC 재단이 개발한 자�
 
 msgid "Korean Language"
 msgstr "한국어 설정"
+
+msgid "Install"
+msgstr "설치"
+
+msgid "Site"
+msgstr "이동"
+
 
 
 #~ msgid "Visit the forums"

@@ -1,3 +1,9 @@
+hamonikr-welcome (3.2.0) hanla; urgency=medium
+
+  * Update Development Program
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 15 Nov 2021 17:52:00 +0900
+
 hamonikr-welcome (3.1.9) hanla; urgency=medium
 
   * Add install Asbru-cm

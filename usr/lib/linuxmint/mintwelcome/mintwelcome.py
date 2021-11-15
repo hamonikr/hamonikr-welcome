@@ -104,14 +104,32 @@ class MintWelcome():
         builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
         builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
         
-        # development software
+
+        ### ---------- development software start ---------- ###
+        
+        # Editor
         # builder.get_object("button_vscode").connect("clicked", self.visit, "apt://code?refresh=yes")
         builder.get_object("button_vscode").connect("clicked", self.on_button_vscode_clicked)
+
+        # DBMS
+        builder.get_object("button_mysql_server").connect("clicked", self.visit, "apt://mysql-server?refresh=yes")
+        builder.get_object("button_postgresql").connect("clicked", self.visit, "apt://postgresql?refresh=yes")
+
+        # WEB/WAS
+        builder.get_object("button_apache").connect("clicked", self.visit, "apt://apache2?refresh=yes")
+        builder.get_object("button_tomcat").connect("clicked", self.visit, "apt://tomcat9?refresh=yes")
+
+        # Development Language
         builder.get_object("button_default_jdk").connect("clicked", self.visit, "apt://default-jdk?refresh=yes")
+        builder.get_object("button_python_pip").connect("clicked", self.visit, "apt://python3-pip?refresh=yes")
+
+        # Etc...
+        builder.get_object("button_asbru").connect("clicked", self.visit, "apt://asbru-cm?refresh=yes")
         builder.get_object("button_git").connect("clicked", self.visit, "apt://git?refresh=yes")
         builder.get_object("button_rabbitvcs").connect("clicked", self.visit, "apt://hamonikr-nemo-rabbitvcs?refresh=yes")
         builder.get_object("button_avahi").connect("clicked", self.visit, "apt://hamonikr-avahi-service?refresh=yes")
-        builder.get_object("button_asbru").connect("clicked", self.visit, "apt://asbru-cm?refresh=yes")
+
+        ### ---------- development software end ---------- ###
 
         # custom help
         builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr")
@@ -121,6 +139,9 @@ class MintWelcome():
         # builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
         # builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
         # builder.get_object("button_hamonikr_cli_tools").connect("clicked", self.visit, "apt://hamonikr-cli-tools?refresh=yes")
+
+
+
 
         # Settings button depends on DE
         de_is_cinnamon = False
