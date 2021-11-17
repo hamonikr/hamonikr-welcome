@@ -82,8 +82,8 @@ class MintWelcome():
         builder.get_object("button_contribute").connect("clicked", self.visit, "https://github.com/hamonikr")
         builder.get_object("button_irc").connect("clicked", self.visit, "https://hamonikr.org/how_join")
         builder.get_object("button_codecs").connect("clicked", self.visit, "apt://mint-meta-codecs?refresh=yes")
-        builder.get_object("button_new_features").connect("clicked", self.visit, "https://hamonikr.org/download_HANLA")
-        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://hamonikr.org/hamoni_board/103996")
+        builder.get_object("button_new_features").connect("clicked", self.visit, "https://docs.hamonikr.org/new-features/")
+        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://docs.hamonikr.org/release-note/")
         builder.get_object("button_mintupdate").connect("clicked", self.launch, "mintupdate")
         builder.get_object("button_mintinstall").connect("clicked", self.launch, "mintinstall")
         builder.get_object("button_timeshift").connect("clicked", self.pkexec, "timeshift-gtk")
@@ -132,7 +132,7 @@ class MintWelcome():
         ### ---------- development software end ---------- ###
 
         # custom help
-        builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr")
+        builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-5.0")
         builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
 
         # builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
