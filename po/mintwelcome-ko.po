@@ -352,6 +352,24 @@ msgstr "한컴오피스 2022 베타"
 msgid "Hancom-Office 2022 Beta Install Support. The license copyright is owned by Hancom. It can be end at any time."
 msgstr "한컴오피스 2022 베타 설치 지원. 라이선스 저작권은 한글과 컴퓨터에게 있습니다. 설치 지원이 종료될 수 있습니다."
 
+msgid "Ventoy"
+msgstr "Ventoy 부팅 USB 제작"
+
+msgid "Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files. With ventoy, you don't need to format the disk over and over, you just need to copy the ISO/WIM/IMG/VHD(x)/EFI files to the USB drive and boot them directly."
+msgstr "Ventoy는 부팅 USB 드라이브를 만들수 있는 오픈 소스 어플리케이션 입니다. Ventoy를 사용하면 USB를 포맷할 필요없이 설치파일을 USB 드라이브에 복사하여 직접 부팅하면 됩니다."
+
+msgid "SystemBack"
+msgstr "SystemBack 백업 및 복구"
+
+msgid "Easily backup and store your own PC environment in use. You can use your own PC environment wherever you are by creating a USB set as your own environment."
+msgstr "사용중인 PC 환경을 쉽게 백업하고 저장할 수 있습니다. USB를 사용자 환경으로 만들어 어디에서나 사용자 고유의 PC 환경을 사용할 수 있습니다."
+
+msgid "Live-Usb-Creator"
+msgstr "Live-Usb_Creator 라이브 Usb 제작"
+
+msgid "This program can create a writable live USB. So you don't waste space on the USB when creating a bootable USB from an ISO image. This is a modified version of live-usb-maker used in the MXLinux project to be used in the latest Ubuntu. A writable folder is created in the created USB, and data can be freely written in it. You can specify the percentage of space on the USB to be used."
+msgstr "이 프로그램은 쓰기 가능한 라이브 USB를 만들 수 있고 ISO 이미지로 부팅 가능한 USB를 만들 때 USB 공간을 낭비하지 않습니다. 최신 Ubuntu에서 사용하는 MXLinux 프로젝트에 사용된 live-usb-maker의 수정된 버전입니다. USB에 쓰기 가능한 폴더가 생성되고 데이터를 자유롭게 쓸 수 있습니다. USB에서 사용할 공간의 백분율을 지정할 수 있습니다."
+
 msgid "KakaoTalk(Wine)"
 msgstr "카카오톡(와인)"
 
