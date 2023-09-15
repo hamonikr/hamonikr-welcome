@@ -46,14 +46,27 @@ class MintWelcome():
         window.set_position(Gtk.WindowPosition.CENTER)
         window.connect("destroy", Gtk.main_quit)
 
-        with open("/etc/hamonikr/info") as f:
-            config = dict([line.strip().split("=") for line in f])
-        codename = config['CODENAME'].capitalize()
-        edition = config['EDITION'].replace('"', '')
-        release = config['RELEASE']
-        desktop = config['DESKTOP']
-        release_notes = config['RELEASE_NOTES_URL']
-        new_features = config['NEW_FEATURES_URL']
+        try:
+            with open("/etc/hamonikr/info") as f:
+                config = dict([line.strip().split("=") for line in f])
+            codename = config['CODENAME'].capitalize()
+            edition = config['EDITION'].replace('"', '')
+            release = config['RELEASE']
+            desktop = config['DESKTOP']
+            release_notes = config['RELEASE_NOTES_URL']
+            new_features = config['NEW_FEATURES_URL']                
+        except FileNotFoundError:
+            with open("/etc/lsb-release") as f:
+                config = dict([line.strip().split("=") for line in f])            
+            codename = config['DISTRIB_CODENAME'].capitalize()
+            edition = config['DISTRIB_DESCRIPTION'].replace('"', '')
+            release = config['DISTRIB_RELEASE']
+            desktop = config['DISTRIB_ID']
+            release_notes = "https://hamonikr.org"
+            new_features = "https://github.com/hamonikr"
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")        
+
         architecture = "64-bit"
         if platform.machine() != "x86_64":
             architecture = "32-bit"
@@ -93,16 +106,19 @@ class MintWelcome():
         builder.get_object("button_layout_new").connect("clicked", self.on_button_layout_clicked, LAYOUT_STYLE_NEW)
         
         # custom new features
-        builder.get_object("button_license").connect("clicked", self.visit, "http://pms.invesume.com:8090/hl/os/5-0")
+        builder.get_object("button_license").connect("clicked", self.visit, "http://confluence.invesume.com/pages/viewpage.action?pageId=41779300")
 
         # custom recommended software
-        builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
+        # builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
         builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "kakaotalk-install")
+        builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
+        builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
+        builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
         builder.get_object("button_hamonikr_drive").connect("clicked", self.visit, "https://drive.hamonikr.org/")
         builder.get_object("button_lutris").connect("clicked", self.on_button_lutris_clicked)
-        builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
-        builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
+        # builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
+        # builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
         
 
         ### ---------- development software start ---------- ###
@@ -132,16 +148,9 @@ class MintWelcome():
         ### ---------- development software end ---------- ###
 
         # custom help
-        builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-5.0")
-        builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
-
-        # builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
-        # builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
-        # builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
+        builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-7.0")
+        # builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
         # builder.get_object("button_hamonikr_cli_tools").connect("clicked", self.visit, "apt://hamonikr-cli-tools?refresh=yes")
-
-
-
 
         # Settings button depends on DE
         de_is_cinnamon = False
@@ -182,6 +191,26 @@ class MintWelcome():
         # Hide new features page for LMDE
         if dist_name == "LMDE":
             builder.get_object("box_documentation").remove(builder.get_object("box_new_features"))
+
+        # Hide for Ubuntu
+        if dist_name == "Ubuntu":
+            builder.get_object("box_first_steps").remove(builder.get_object("box_drivers"))
+            builder.get_object("box_first_steps").remove(builder.get_object("box_timeshift"))            
+            builder.get_object("box_first_steps").remove(builder.get_object("box_drivers"))            
+            builder.get_object("box_first_steps").remove(builder.get_object("box_codecs"))            
+            builder.get_object("box_first_steps").remove(builder.get_object("box_updatemanager"))
+            builder.get_object("box_first_steps").remove(builder.get_object("box_softwarecenter"))
+            builder.get_object("box_first_steps").remove(builder.get_object("box_gufw"))
+            builder.get_object("box_help").remove(builder.get_object("box_hamonikrshortcut"))
+            builder.get_object("box_home").remove(builder.get_object("box_hamonikrlogo"))
+            builder.get_object("box_documentation").remove(builder.get_object("box_new_features"))
+            builder.get_object("box_documentation").remove(builder.get_object("box_releasenote"))
+            builder.get_object("box_documentation").remove(builder.get_object("box_pkglicense"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_1"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_2"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_4"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_10"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_12"))            
 
         # Construct the stack switcher
         list_box = builder.get_object("list_navigation")
@@ -239,12 +268,13 @@ class MintWelcome():
             surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/hamonikr_modern.png", scale)
             builder.get_object("img_modern").set_from_surface(surface)
 
-        path = "/usr/share/linuxmint/mintwelcome/colors/"
-        if scale == 2:
-            path = "/usr/share/linuxmint/mintwelcome/colors/hidpi/"
-        for color in ["green", "aqua", "blue", "brown", "grey", "orange", "pink", "purple", "red", "sand", "teal"]:
-            builder.get_object("img_" + color).set_from_surface(self.surface_for_path("%s/%s.png" % (path, color), scale))
-            builder.get_object("button_" + color).connect("clicked", self.on_color_button_clicked, color)
+        if dist_name != "Ubuntu":
+            path = "/usr/share/linuxmint/mintwelcome/colors/"
+            if scale == 2:
+                path = "/usr/share/linuxmint/mintwelcome/colors/hidpi/"
+            for color in ["green", "aqua", "blue", "brown", "grey", "orange", "pink", "purple", "red", "sand", "teal"]:
+                builder.get_object("img_" + color).set_from_surface(self.surface_for_path("%s/%s.png" % (path, color), scale))
+                builder.get_object("button_" + color).connect("clicked", self.on_color_button_clicked, color)
 
         builder.get_object("switch_dark").connect("state-set", self.on_dark_mode_changed)
 
@@ -316,7 +346,8 @@ class MintWelcome():
         if style == LAYOUT_STYLE_LEGACY:
 
             # 전통적인 윈도우 테마 (hamonikr-themes 종속적)
-            os.system("hamonikr-theme-start default")
+            os.system(" rm -rf ~/.hamonikr/theme")
+            os.system("hamonikr-theme-setting winstyle")
 
             # # 패널 위치
             # settings.set_strv("panels-enabled", ['1:0:bottom'])
@@ -336,7 +367,8 @@ class MintWelcome():
         elif style == LAYOUT_STYLE_NEW:
             
             # 패널이 상단에 있는 윈도우 테마 (hamonikr-themes 종속적)
-            os.system("hamonikr-theme-start hanla")
+            os.system(" rm -rf ~/.hamonikr/theme")            
+            os.system("hamonikr-theme-setting macstyle")
 
             # # 패널위치
             # settings.set_strv("panels-enabled", ['1:0:top'])
@@ -425,13 +457,13 @@ class MintWelcome():
         subprocess.Popen(["pkexec", command])
 
     def on_button_lutris_clicked (self, button):
-        os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris' && xdg-open apt://lutris?refresh=yes")
+        os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris' && apt install -y lutris")
 
     def on_button_vscode_clicked (self, button):
-        os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && xdg-open apt://code?refresh=yes")
+        os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code")
     
     def on_button_kodi_clicked (self, button):
-        os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y' && xdg-open apt://kodi?refresh=yes")
+        os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y' && apt install -y kodi")
 
     def on_button_korean_language (self, button):
         os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")

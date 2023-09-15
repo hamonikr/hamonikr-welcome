@@ -1,3 +1,14 @@
+hamonikr-welcome (3.3.0) jammy; urgency=medium
+
+  [Kevin Kim]
+  * Release in Ubuntu 22.04
+   - Add check for Ubuntu env and hide few menu
+   - Update translation
+  * Changed kakaotalk yaml
+   - Update lutris-fshack-7.2-x86_64 version
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 15 Sep 2023 13:14:12 +0900
+
 hamonikr-welcome (3.2.1) hanla; urgency=medium
 
   * Change link
