@@ -38,13 +38,15 @@ if [ ! -z "$CHECK" ]; then
     zenity --info --width 350 --text "이미 설치되어 있습니다.\n/home/$RUID/Games/kakaotalk\n폴더를 제거하고 다시 실행해주세요"
     exit 0
   else
+    if [ ! -f "/usr/lib/linuxmint/mintwelcome/KakaoTalk.yml" ] ; then
+      sudo wget -O /usr/lib/linuxmint/mintwelcome/KakaoTalk.yml https://raw.githubusercontent.com/hamonikr/hamonikr-welcome/master/usr/lib/linuxmint/mintwelcome/KakaoTalk.yml
+    fi
     sudo -u $RUID /usr/games/lutris -i /usr/lib/linuxmint/mintwelcome/KakaoTalk.yml
   fi
 else
 
   if zenity --question --width 350 --text="카카오톡을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?"; then
     
-    # gnome-terminal --wait -- /bin/sh -c 'echo "패키지를 설치중입니다.. 잠시만 기다려주세요."; sleep 3; sudo add-apt-repository -y ppa:lutris-team/lutris; sudo apt update; sudo apt install -y lutris; echo "설치가 완료되었습니다." ; sleep 3; exit 0; read'
     sudo add-apt-repository -y ppa:lutris-team/lutris
     sudo apt update
     sudo apt install -y lutris
