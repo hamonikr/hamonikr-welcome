@@ -75,6 +75,7 @@ class MintWelcome():
         with open("/etc/lsb-release") as f:
             config = dict([line.strip().split("=") for line in f])
         dist_name = config['DISTRIB_ID']
+        dist_ver = config['DISTRIB_RELEASE']
 
         if os.path.exists("/usr/share/doc/debian-system-adjustments/copyright"):
             dist_name = "LMDE"
@@ -212,6 +213,16 @@ class MintWelcome():
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_10"))            
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_12"))            
 
+        # HamoniKR 7.0 case
+        if ( dist_name == "HamoniKR" and dist_ver == "7.0" ):
+            # Hide Hancom-Office 2022 Beta
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_1"))
+            # Hide 사이트 호환성 패키지
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_2"))
+            # Hide hamonikr-drive
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_4")) 
+            builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
+
         # Construct the stack switcher
         list_box = builder.get_object("list_navigation")
 
@@ -267,14 +278,6 @@ class MintWelcome():
             builder.get_object("img_legacy").set_from_surface(surface)
             surface = self.surface_for_path("/usr/share/linuxmint/mintwelcome/hamonikr_modern.png", scale)
             builder.get_object("img_modern").set_from_surface(surface)
-
-        if dist_name != "Ubuntu":
-            path = "/usr/share/linuxmint/mintwelcome/colors/"
-            if scale == 2:
-                path = "/usr/share/linuxmint/mintwelcome/colors/hidpi/"
-            for color in ["green", "aqua", "blue", "brown", "grey", "orange", "pink", "purple", "red", "sand", "teal"]:
-                builder.get_object("img_" + color).set_from_surface(self.surface_for_path("%s/%s.png" % (path, color), scale))
-                builder.get_object("button_" + color).connect("clicked", self.on_color_button_clicked, color)
 
         builder.get_object("switch_dark").connect("state-set", self.on_dark_mode_changed)
 

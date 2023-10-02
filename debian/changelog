@@ -1,3 +1,12 @@
+hamonikr-welcome (3.3.1) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR 7.0
+   - Removed change color feature 
+   - Hide hwp office install part
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 02 Oct 2023 17:39:40 +0900
+
 hamonikr-welcome (3.3.0) jammy; urgency=medium
 
   [Kevin Kim]
