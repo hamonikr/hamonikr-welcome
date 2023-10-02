@@ -1,3 +1,11 @@
+hamonikr-welcome (3.3.2) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Change application name
+   - renamed as hamonikr-welcome.desktop
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 02 Oct 2023 20:06:09 +0900
+
 hamonikr-welcome (3.3.1) kumkang; urgency=medium
 
   [Kevin Kim]
