@@ -1,3 +1,12 @@
+hamonikr-welcome (3.3.3) stable; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR 7.0
+   - Added exception handling
+   - Update for Ubuntu and HamoniKR 7.0 
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 11 Oct 2023 15:47:50 +0900
+
 hamonikr-welcome (3.3.2) kumkang; urgency=medium
 
   [Kevin Kim]
