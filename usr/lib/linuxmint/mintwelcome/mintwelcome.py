@@ -7,6 +7,7 @@ import platform
 import subprocess
 import locale
 import cairo
+import glob
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gio, Gdk, GdkPixbuf
 
@@ -467,6 +468,14 @@ class MintWelcome():
     def pkexec(self, button, command):
         subprocess.Popen(["pkexec", command])
 
+    # 해당 경로에서 이미 등록된 ppa 가 있을 경우 체크하는 기능으로 apt 주소의 중복등록을 방지
+    def ppa_exists(ppa_path, ppa_url):
+        for filename in glob.glob(f"{ppa_path}/*.list"):
+            with open(filename) as f:
+                if ppa_url in f.read():
+                    return True
+        return False
+
     def on_button_lutris_clicked (self, button):
         try:
             subprocess.run(["dpkg-query", "-l", "lutris"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -475,7 +484,9 @@ class MintWelcome():
             dialog.run()
             dialog.destroy()
         except subprocess.CalledProcessError:
-            os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt install -y lutris'")
+            if not self.ppa_exists("/etc/apt/sources.list.d", "https://ppa.launchpadcontent.net/lutris-team/lutris/ubuntu/"):
+                os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update'")
+                os.system("pkexec sh -c 'apt install -y lutris'")
             dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
             dialog.format_secondary_text("Lutris has been installed on your system.")
             dialog.run()
@@ -489,7 +500,9 @@ class MintWelcome():
             dialog.run()
             dialog.destroy()
         except subprocess.CalledProcessError:
-            os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code")
+            if not self.ppa_exists("/etc/apt/sources.list.d", "https://packages.microsoft.com/repos/vscode"):
+                os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list && apt update'")
+                os.system("pkexec sh -c 'apt install -y code'")
             dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
             dialog.format_secondary_text("CODE has been installed on your system.")
             dialog.run()
@@ -503,7 +516,9 @@ class MintWelcome():
             dialog.run()
             dialog.destroy()
         except subprocess.CalledProcessError:
-            os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt install -y kodi")
+            if not self.ppa_exists("/etc/apt/sources.list.d", "http://ppa.launchpad.net/team-xbmc/ppa/ubuntu"):
+                os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update'")
+                os.system("pkexec sh -c 'apt install -y kodi'")
             dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
             dialog.format_secondary_text("KODI has been installed on your system.")
             dialog.run()
