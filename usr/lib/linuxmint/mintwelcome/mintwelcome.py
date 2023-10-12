@@ -8,6 +8,7 @@ import subprocess
 import locale
 import cairo
 import glob
+import re
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gio, Gdk, GdkPixbuf
 
@@ -153,7 +154,7 @@ class MintWelcome():
 
         # custom help
         builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-7.0")
-        # builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
+        builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
         # builder.get_object("button_hamonikr_cli_tools").connect("clicked", self.visit, "apt://hamonikr-cli-tools?refresh=yes")
 
         # Settings button depends on DE
@@ -469,60 +470,76 @@ class MintWelcome():
         subprocess.Popen(["pkexec", command])
 
     # 해당 경로에서 이미 등록된 ppa 가 있을 경우 체크하는 기능으로 apt 주소의 중복등록을 방지
-    def ppa_exists(ppa_path, ppa_url):
-        for filename in glob.glob(f"{ppa_path}/*.list"):
-            with open(filename) as f:
-                if ppa_url in f.read():
-                    return True
-        return False
+    def ppa_exists(self, folder, ppa):
+        try:
+            for filename in os.listdir(folder):
+                if filename.endswith(".list"):
+                    with open(os.path.join(folder, filename)) as f:
+                        if re.search(ppa, f.read()):
+                            return True
+            return False
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
 
     def on_button_lutris_clicked (self, button):
         try:
-            subprocess.run(["dpkg-query", "-l", "lutris"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package is already installed")
-            dialog.format_secondary_text("Lutris is already installed on your system.")
-            dialog.run()
-            dialog.destroy()
-        except subprocess.CalledProcessError:
-            if not self.ppa_exists("/etc/apt/sources.list.d", "https://ppa.launchpadcontent.net/lutris-team/lutris/ubuntu/"):
-                os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update'")
-                os.system("pkexec sh -c 'apt install -y lutris'")
-            dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
-            dialog.format_secondary_text("Lutris has been installed on your system.")
-            dialog.run()
-            dialog.destroy()
+            result = subprocess.run(["dpkg", "-l"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            if 'ii  lutris ' in result.stdout:
+                dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package is already installed")
+                dialog.format_secondary_text("lutris is already installed on your system.")
+                dialog.run()
+                dialog.destroy()
+            else:
+                if not self.ppa_exists("/etc/apt/sources.list.d", "https://ppa.launchpadcontent.net/lutris-team/lutris/ubuntu/"):
+                    os.system("pkexec sh -c 'sudo add-apt-repository -y ppa:lutris-team/lutris && apt update && apt install -y lutris'")
+                else:
+                    os.system("pkexec sh -c 'sudo apt update && sudo apt install -y lutris'")                    
+                dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
+                dialog.format_secondary_text("Lutris has been installed on your system.")
+                dialog.run()
+                dialog.destroy()                                
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")            
 
     def on_button_vscode_clicked (self, button):
         try:
-            subprocess.run(["dpkg-query", "-l", "code"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package is already installed")
-            dialog.format_secondary_text("CODE is already installed on your system.")
-            dialog.run()
-            dialog.destroy()
-        except subprocess.CalledProcessError:
-            if not self.ppa_exists("/etc/apt/sources.list.d", "https://packages.microsoft.com/repos/vscode"):
-                os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list && apt update'")
-                os.system("pkexec sh -c 'apt install -y code'")
-            dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
-            dialog.format_secondary_text("CODE has been installed on your system.")
-            dialog.run()
-            dialog.destroy()        
+            result = subprocess.run(["dpkg", "-l"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            if 'ii  code ' in result.stdout:
+                dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package is already installed")
+                dialog.format_secondary_text("CODE is already installed on your system.")
+                dialog.run()
+                dialog.destroy()
+            else:
+                if not self.ppa_exists("/etc/apt/sources.list.d", "https://packages.microsoft.com/repos/code"):
+                    os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list && apt update && apt install -y code'")
+                else:
+                    os.system("pkexec sh -c 'sudo apt update && sudo apt install -y code'")                    
+                dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
+                dialog.format_secondary_text("CODE has been installed on your system.")
+                dialog.run()
+                dialog.destroy()                                
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")            
     
     def on_button_kodi_clicked (self, button):
         try:
-            subprocess.run(["dpkg-query", "-l", "kodi"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package is already installed")
-            dialog.format_secondary_text("KODI is already installed on your system.")
-            dialog.run()
-            dialog.destroy()
-        except subprocess.CalledProcessError:
-            if not self.ppa_exists("/etc/apt/sources.list.d", "http://ppa.launchpad.net/team-xbmc/ppa/ubuntu"):
-                os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update'")
-                os.system("pkexec sh -c 'apt install -y kodi'")
-            dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
-            dialog.format_secondary_text("KODI has been installed on your system.")
-            dialog.run()
-            dialog.destroy()                
+            result = subprocess.run(["dpkg", "-l"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            if 'ii  kodi ' in result.stdout:
+                dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package is already installed")
+                dialog.format_secondary_text("KODI is already installed on your system.")
+                dialog.run()
+                dialog.destroy()
+            else:
+                if not self.ppa_exists("/etc/apt/sources.list.d", "https://ppa.launchpadcontent.net/team-xbmc/ppa/ubuntu"):
+                    os.system("pkexec sh -c 'sudo add-apt-repository -y ppa:team-xbmc/ppa && apt update && apt install -y kodi'")
+                else:
+                    os.system("pkexec sh -c 'sudo apt update && sudo apt install -y kodi'")                    
+                dialog = Gtk.MessageDialog(flags=0, message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.OK, text="Package installed")
+                dialog.format_secondary_text("KODI has been installed on your system.")
+                dialog.run()
+                dialog.destroy()                                
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
 
     def on_button_korean_language (self, button):
         os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")
