@@ -1,21 +1,20 @@
-# Korean translation for linuxmint
-# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
-# This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: linuxmint\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2020-06-18 12:29+0100\n"
-"PO-Revision-Date: 2019-12-05 16:24+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-06-24 10:01+0000\n"
-"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
 
 #: usr/lib/linuxmint/mintwelcome/mintwelcome.py:134
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:1
@@ -29,7 +28,7 @@ msgstr "첫 번째 단계"
 #: usr/lib/linuxmint/mintwelcome/mintwelcome.py:143
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:5
 msgid "Documentation"
-msgstr "서류 작업"
+msgstr "문서화"
 
 #: usr/lib/linuxmint/mintwelcome/mintwelcome.py:147
 msgid "Help"
@@ -62,8 +61,9 @@ msgstr "설치되지 않은 멀티미디어 코덱 설치"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:3
 msgid ""
-"HamoniKR is a great open source project in Korea. It is open to anyone who wants to participate. "
-"There are many ways to help. Click the button below to see how you can get involved."
+"HamoniKR is a great open source project in Korea. It is open to anyone who "
+"wants to participate. There are many ways to help. Click the button below to "
+"see how you can get involved."
 msgstr ""
 "하모니카는 멋진 프로젝트입니다. 이 프로젝트는 참여를 원하는 누구에게나 열려 있습니다. 도움을 줄 수 있는 여러가지 방법들이 "
 "있습니다. 참여 방법을 보려면 아래 버튼을 클릭하십시오."
@@ -74,12 +74,12 @@ msgstr "실행"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:6
 msgid ""
-"The HamoniKR documentation consists of a collection of guides, available "
-"in PDF, ePUB and HTML and available in many languages. Click the button "
-"below to see which guides are available."
+"The HamoniKR documentation consists of a collection of guides, available in "
+"PDF, ePUB and HTML and available in many languages. Click the button below "
+"to see which guides are available."
 msgstr ""
-"설명서는 PDF, ePUB  그리고 HTML 형식 및 다양한 언어로 제공되는 가이드 모음으로 구성되어 있습니다. 사용 가능한 "
-"가이드를 보려면 아래 버튼을 클릭하십시오."
+"설명서는 PDF, HTML 형식으로 제공되는 가이드 모음으로 "
+"구성되어 있습니다. 사용 가능한 가이드를 보려면 아래 버튼을 클릭하십시오."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:7
 msgid "New Features"
@@ -89,7 +89,8 @@ msgstr "새로운 기능"
 msgid ""
 "Click the button below to discover the new features introduced in this "
 "version of HamoniKR."
-msgstr "이 버전의 하모니카에서 새롭게 도입된 기능을 확인하려면 아래 버튼을 클릭하십시오."
+msgstr "이 버전의 하모니카에서 새롭게 도입된 기능을 확인하려면 "
+"아래 버튼을 클릭하십시오."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:9
 msgid "Release Notes"
@@ -99,7 +100,8 @@ msgstr "릴리즈 노트"
 msgid ""
 "Click the button below to read about known bugs, limitations and workarounds "
 "for this version of HamoniKR."
-msgstr "이 버전의 하모니카에 대한 알려진 버그, 제한 사항 및 해결 방법을 보려면 아래 버튼을 클릭하십시오."
+msgstr "이 버전의 하모니카에 대한 알려진 버그, 제한 사항 및 "
+"해결 방법을 보려면 아래 버튼을 클릭하십시오."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:11
 msgid "Desktop Colors"
@@ -127,7 +129,7 @@ msgstr "전통적"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:16
 msgid "It's a traditional Windows theme."
-msgstr "전통적인 윈도우 테마입니다."
+msgstr "전통적인 윈도우 스타일 입니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:17
 msgid "Modern"
@@ -135,13 +137,15 @@ msgstr "현대적"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:18
 msgid "Windows theme with panels on top."
-msgstr "패널이 상단에 있는 윈도우 테마입니다."
+msgstr "패널이 상단에 있는 스타일 입니다"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:19
 msgid ""
 "Note: Cinnamon will restart after you choose a new theme. Any customization "
 "you made to the theme will be lost."
-msgstr "노트 : 새로운 테마 선택시 시나몬을 다시 시작해야 합니다. 테마에 대한 모든 사용자 정의가 손실됩니다."
+msgstr ""
+"노트 : 새로운 테마 선택시 시나몬을 다시 시작해야 합니다. "
+"테마에 대한 모든 사용자 정의가 손실됩니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:20
 msgid "System Snapshots"
@@ -158,7 +162,7 @@ msgstr ""
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:22
 msgid "Driver Manager"
-msgstr "드라이버 매니저"
+msgstr "드라이버 관리자"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:23
 msgid ""
@@ -167,7 +171,8 @@ msgid ""
 "and work automatically without the need to install drivers. Some however "
 "require proprietary drivers to be recognized or to work better."
 msgstr ""
-"드라이버 매니저에서 컴퓨터에 대한 추가 드라이버를 권장하는지 확인하세요. 대부분의 하드웨어 구성 요소는 리눅스 커널이 인식하며 드라이버를 "
+"드라이버 매니저에서 컴퓨터에 대한 추가 드라이버를 권장하는지 확인하세요. "
+"대부분의 하드웨어 구성 요소는 리눅스 커널이 인식하며 드라이버를 "
 "설치할 필요 없이 자동으로 작동합니다. 그러나 일부는 독점 드라이버가 필요하거나 더 잘 작동합니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:24
@@ -180,8 +185,8 @@ msgid ""
 "play popular audio, video and web content. Click the button below to install "
 "them."
 msgstr ""
-"일부 포맷의 지원에 그리고 널리 사용되는 오디오, 비디오 및 웹 콘텐츠를 재생하려면 추가 멀티미디어 코덱이 필요합니다. 아래 버튼을 "
-"클릭해서 설치하세요."
+"일부 포맷의 지원에 그리고 널리 사용되는 오디오, 비디오 및 웹 콘텐츠를 재생하려면 "
+"추가 멀티미디어 코덱이 필요합니다. 아래 버튼을 클릭해서 설치하세요."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:26
 msgid "Update Manager"
@@ -193,8 +198,10 @@ msgid ""
 "provides software updates, security updates and kernel updates to fix bugs, "
 "keep your computer safe and support newer hardware components."
 msgstr ""
-"시스템 트레이에 보이는 작은 방패 아이콘이 업데이트 매니저입니다. 버그를 수정하고 컴퓨터를 안전하게 유지하며 최신 하드웨어 구성 요소를 "
+"시스템 트레이에 보이는 작은 방패 아이콘이 업데이트 매니저입니다. "
+"버그를 수정하고 컴퓨터를 안전하게 유지하며 최신 하드웨어 구성 요소를 "
 "지원하는 소프트웨어 업데이트, 보안 업데이트 및 커널 업데이트를 제공합니다."
+
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:28
 msgid "System Settings"
@@ -204,7 +211,9 @@ msgstr "시스템 설정"
 msgid ""
 "Have a look at the system settings and configure your operating system the "
 "way you like. Don't hesitate to customize it and make it feel like home."
-msgstr "시스템 설정을 확인하시고 운영 체제를 여러분에게 맞게 설정하세요. 주저하지 말고 편하게 자신에게 맞게 꾸며보세요."
+msgstr ""
+"시스템 설정을 확인하시고 운영 체제를 여러분에게 맞게 설정하세요. "
+"편하게 자신에게 맞게 꾸며보세요."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:30
 msgid "Software Manager"
@@ -212,12 +221,14 @@ msgstr "소프트웨어 매니저"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:31
 msgid ""
-"There are about 60,000 applications available. HamoniKR comes with the "
-"bare minimum to get you started. The Software Manager is there if you're "
-"looking for more."
+"There are about 60,000 applications available. HamoniKR comes with the bare "
+"minimum to get you started. The Software Manager is there if you're looking "
+"for more."
 msgstr ""
-"약 60,000개의 애플리케이션을 사용할 수 있습니다. 하모니카는 사용자가 시작하기 위한 최소한의 애플리케이션만 제공됩니다. "
-"소프트웨어 관리자에서 더 많은 애플리케이션을 찾을 수 있습니다."
+"하모니카는 사용자가 시작하기 위한 기본적인 애플리케이션을 제공합니다. "
+"그 중 원하는 프로그램이 없는 경우는 소프트어 매니저에서 "
+"6만개 이상의 다양한 분야별 애플리케이션을 쉽게 사용할 수 있습니다."
+
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:32
 msgid "Firewall"
@@ -236,7 +247,8 @@ msgid ""
 "The HamoniKR forums are the best place to find help. Join thousands of "
 "users, search topics and threads and find solutions to your problems."
 msgstr ""
-"하모니카 커뮤니티는은 도움을 받을 수 있는 최고의 장소입니다. 수천 명의 사용자와 함께 주제와 게시글을 검색하고 문제에 대한 솔루션을 "
+"하모니카 커뮤니티는 도움을 받을 수 있는 최고의 장소입니다. "
+"수천명의 사용자와 함께 공유하고 토론하며 문제에 대한 솔루션을 "
 "찾으십시오."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:36
@@ -248,8 +260,8 @@ msgid ""
 "You can also connect to the Slack Chanel and chat with users who are "
 "currently online. Ask a question, maybe someone there knows the solution?"
 msgstr ""
-"하모니카 커뮤니티 슬랙 채널에 연결하여 현재 온라인 상태인 사용자와 채팅할 수 있습니다. 물어보세요, "
-"누구나 참여하셔서 하모니카 커뮤니티에서 나누고 싶은 이야기를 자유롭게 하실 수 있습니다."
+"하모니카 커뮤니티 슬랙 채널에 연결하여 현재 온라인 상태인 사용자와 채팅할 수 있습니다. "
+"누구나 참여하셔서 하모니카 커뮤니티에서 나누고 싶은 이야기를 자유롭게 하세요."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:38
 msgid ""
@@ -258,8 +270,9 @@ msgid ""
 "them. Keep a happy and positive attitude and provide accurate information "
 "when someone helps you."
 msgstr ""
-"하모니카는 훌륭한 커뮤니티가 있습니다. 많은 사용자들이 여러분을 두 팔 벌려 환영할 것이며 도움을 드릴 수 있음을 기뻐할 것입니다. "
-"그들을 인내와 존중으로 만나주세요. 누군과 여러분을 도와 드릴 때 기쁘고 긍정적인 마음가짐으로 정확한 정보를 제공해주세요."
+"하모니카는 훌륭한 커뮤니티가 있습니다. 많은 사용자들이 여러분을 두 팔 벌려 "
+"환영할 것이며 도움을 드릴 수 있음을 기뻐할 것입니다. "
+"누군과 여러분을 도와 드릴 때 기쁘고 긍정적인 마음가짐으로 정확한 정보를 제공해주세요."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:39
 msgid ""
@@ -268,8 +281,9 @@ msgid ""
 "behave nicely, our project promotes help, respect, tolerance, ideas and "
 "constructive discussions."
 msgstr ""
-"다른 사용자와 좋지 않은 일이 생기는 경우 스스로 해결하시거나 중재 팀에 연락하세요. 모든 사람들이 예의 바르게 행동 하리라고 보장할 "
-"수는 없어도, 우리 프로젝트는 도움, 존중, 관용, 아이디어 및 건설적인 토론을 장려합니다."
+"다른 사용자와 좋지 않은 일이 생기는 경우 스스로 해결이 어려우면 중재팀에 연락하세요. "
+"모든 사람들이 예의 바르게 행동 하리라고 보장할 수는 없어도, "
+"하모니카 프로젝트는 도움, 존중, 관용, 아이디어 및 건설적인 토론을 장려합니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:40
 msgid "Welcome to HamoniKR"
@@ -277,14 +291,17 @@ msgstr "하모니카에 오신 것을 환영합니다"
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:41
 msgid "Welcome to your new operating system!"
-msgstr "하모니카는 데스크톱 사용자에게 최적화된 다양한 편의성을 제공하는 개방형 운영체제로 최근까지 국내 26개 공공 및 민간 부문에서 40만명 이상이 사용하고 있는 운영체제입니다."
+msgstr ""
+"하모니카는 데스크톱 사용자에게 최적화된 다양한 편의성을 제공하는 개방형 운영체제로\n"
+"최근까지 국내 26개 공공 및 민간 부문에서 40만명 이상이 사용하고 있으며\n"
+"20만건 이상의 사용자 다운로드가 제공된 신뢰할 수 있는 운영체제 입니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:42
 msgid ""
 "This welcome screen will guide you through your first steps, show you how to "
 "find help and where to get more information about HamoniKR."
 msgstr ""
-"다양한 최신 하드웨어를 지원하고 있으며 2030년까지 안정적인 기능 및 보안 업데이트를 제공합니다."
+"다양한 최신 하드웨어를 지원하고 있으며 2032년까지 안정적인 기능 및 보안 업데이트를 제공합니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:43
 msgid ""
@@ -292,18 +309,21 @@ msgid ""
 "like to thank you for choosing HamoniKR. We hope you'll enjoy using it as "
 "much as we enjoy working on it."
 msgstr ""
-"  - 소프트웨어 센터를 통한 3만여개의 무료 소프트웨어 제공\n"
-"  - 프로그램의 빠른 실행을 돕는 퀵 런처 기능 (Alt + Space)\n"
-"  - 다양한 최신 하드웨어 지원(Intel Tiger Lake, AMD Navi 12 and 14 GPUs, NVIDIA Optimus)\n"
-"  - 로컬 네트워크 간 쉬운 파일 공유 지원"
+"  - 개인이나 기업 누구에게나 모든 프로그램을 무료로 제공\n"
+"  - 어디서나 빠른 실행을 돕는 퀵 런처 (Alt + Space)\n"
+"  - 한글 HWP, MS 오피스 등의 다양한 문서 작업 가능\n"
+"  - 카카오톡, 슬랙, 줌 등 원활한 비대면 업무 환경 제공\n"
+"  - 드롭박스, 메가드라이브, 구글 드라이브 등 클라우드 환경 지원\n"
+"  - 소프트웨어 매니저를 통한 6만여개의 다양한 소프트웨어 제공."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:44
 msgid "Have a great time and don't hesitate to send us your feedback."
-msgstr "국내 최대의 오픈소스 커뮤니티 하모니카(https://hamonikr.org)와 유튜브 채널을 통해 언제든 사용 중 궁금한 점을 쉽게 해결할 수 있으며, 기업이나 개인 누구나 무료로 사용할 수 있습니다."
+msgstr ""
+"국내 최대의 오픈소스 커뮤니티 하모니카(https://hamonikr.org)와\n"
+"하모니카 유튜브 채널(https://youtube.com/hamonikros)을 통해\n"
+"언제든 사용 중 궁금한 점을 쉽게 해결할 수 있으며, 기업이나 개인 누구나 무료로 사용할 수 있습니다."
 
-
-##### new hamonikr-welcome translate ######
-
+# #### new hamonikr-welcome translate ######
 msgid "HamoniKR Settings"
 msgstr "하모니카 설정"
 
@@ -311,31 +331,45 @@ msgid "Recommended Program"
 msgstr "추천 프로그램"
 
 msgid "Package License"
-msgstr "패키지 라이선스"
+msgstr "라이선스 정보"
 
 msgid "You can check the package license in the HamoniKR OS."
-msgstr "하모니카 OS에 있는 패키지 라이선스를 확인할 수 있습니다."
+msgstr "하모니카 OS에 포함된 프로그램들의 라이선스를 확인할 수 있습니다."
 
 msgid "HamoniKR Help"
 msgstr "하모니카 도움말"
 
-msgid "The HamoniKR help site provides wats to solve various problems. You can move to the site by pressing the Launch button or press F1 to check."
-msgstr "하모니카 도움말 사이트는 다양한 문제를 해결할 수 있는 방법을 제공하고 있습니다. 실행 버튼을 눌러 사이트를 이동하거나 F1 키를 눌러서 확인하실 수 있습니다."
+msgid ""
+"The HamoniKR help site provides wats to solve various problems. You can move "
+"to the site by pressing the Launch button or press F1 to check."
+msgstr ""
+"하모니카 도움말 사이트는 다양한 문제를 해결할 수 있는 방법을 제공하고 있습니다. "
+"실행 버튼을 눌러 사이트를 이동하거나 F1 키를 눌러서 확인하실 수 있습니다."
 
 msgid "Shortcut Keys"
-msgstr "바로가기 키"
+msgstr "단축키"
 
-msgid "Try the shortcut key in the HamoniKR. It's very useful. Also make your own custom shortcut key. If you press Lanuch button, you can check the default shortcut key. Press again to exit"
-msgstr "하모니카에서 바로가기 키를 사용해 보세요. 매우 유용합니다. 또한 바로가기 키를 직접 만들 수 있습니다. 실행 버튼을 누르면 기본 바로가기 키를 확인할 수 있습니다. 종료하려면 다시 누르세요."
+msgid ""
+"Try the shortcut key in the HamoniKR. It's very useful. Also make your own "
+"custom shortcut key. If you press Lanuch button, you can check the default "
+"shortcut key. Press again to exit"
+msgstr ""
+"하모니카에서 제공하는 단축키로 사용해 보세요. "
+"원하는 단축키를 직접 쉽게 설정할 수 있습니다."
+"실행 버튼을 누르면 기본으로 설정된 바로가기 키를 확인할 수 있습니다. "
 
 msgid "Remove"
 msgstr "제거"
 
 msgid "Site-Compatibility-Support"
-msgstr "사이트 호환성 설치지원"
+msgstr "웹사이트 호환성 지원"
 
-msgid "It supports public institutions and banks to use public certificates. Reboot is required after installation."
-msgstr "공공기관, 은행 등에서 (구)공인인증서를 사용할 수 있습니다. 설치 후 재부팅이 필요합니다."
+msgid ""
+"It supports public institutions and banks to use public certificates. Reboot "
+"is required after installation."
+msgstr ""
+"공공기관, 은행 등에서 (구)공인인증서 및 행정서류 발급등의 업무를 사용할 수 있습니다. "
+"패키지 설치 후 재부팅이 필요합니다."
 
 msgid "Second Steps"
 msgstr "두 번째 단계"
@@ -343,134 +377,203 @@ msgstr "두 번째 단계"
 msgid "HamoniKR Install Support"
 msgstr "하모니카 추천 설치 프로그램"
 
-msgid "This is a list of helpful packages recommended by the HamoniKR. Try installing it and using it."
-msgstr "하모니카에서 추천하는 유용한 패키지 목록입니다. 설치해서 사용해보세요."
+msgid ""
+"This is a list of helpful packages recommended by the HamoniKR. Try "
+"installing it and using it."
+msgstr "하모니카에서 추천하는 유용한 프로그램들을 설치해서 사용해 보세요."
 
 msgid "Hancom-Office 2022 Beta"
-msgstr "한컴오피스 2022 베타"
+msgstr "한컴오피스 2022"
 
-msgid "Hancom-Office 2022 Beta Install Support. The license copyright is owned by Hancom. It can be end at any time."
-msgstr "한컴오피스 2022 베타 설치 지원. 라이선스 저작권은 한글과 컴퓨터에게 있습니다. 설치 지원이 종료될 수 있습니다."
+msgid ""
+"Hancom-Office 2022 Beta Install Support. The license copyright is owned by "
+"Hancom. It can be end at any time."
+msgstr ""
+"한컴오피스 2022 베타 설치 지원. 라이선스 저작권은 한글과 컴퓨터에게 있습니다. "
+"한글과 컴퓨터의 배포 정책에 따라 설치 지원이 종료될 수 있습니다."
 
 msgid "Ventoy"
-msgstr "Ventoy 부팅 USB 제작"
+msgstr "Ventoy 차세대 부팅 USB 제작 도구"
 
-msgid "Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files. With ventoy, you don't need to format the disk over and over, you just need to copy the ISO/WIM/IMG/VHD(x)/EFI files to the USB drive and boot them directly."
-msgstr "Ventoy는 부팅 USB 드라이브를 만들수 있는 오픈 소스 어플리케이션 입니다. Ventoy를 사용하면 USB를 포맷할 필요없이 설치파일을 USB 드라이브에 복사하여 직접 부팅하면 됩니다."
+msgid ""
+"Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/"
+"VHD(x)/EFI files. With ventoy, you don't need to format the disk over and "
+"over, you just need to copy the ISO/WIM/IMG/VHD(x)/EFI files to the USB "
+"drive and boot them directly."
+msgstr ""
+"Ventoy는 부팅 USB 드라이브를 만들수 있는 어플리케이션 입니다. "
+"Ventoy를 사용하면 USB를 포맷할 필요없이 ISO 파일을 USB 드라이브에 복사하여 직접 부팅하면 됩니다."
 
 msgid "SystemBack"
-msgstr "SystemBack 백업 및 복구"
+msgstr "시스템 스냅샷 관리 SystemBack"
 
-msgid "Easily backup and store your own PC environment in use. You can use your own PC environment wherever you are by creating a USB set as your own environment."
-msgstr "사용중인 PC 환경을 쉽게 백업하고 저장할 수 있습니다. USB를 사용자 환경으로 만들어 어디에서나 사용자 고유의 PC 환경을 사용할 수 있습니다."
+msgid ""
+"Easily backup and store your own PC environment in use. You can use your own "
+"PC environment wherever you are by creating a USB set as your own "
+"environment."
+msgstr ""
+"사용 중인 PC 환경을 쉽게 USB 같은 장치에 백업하고 복원할 수 있습니다. "
+"자신만의 사용자 환경으로 USB를 만들어 어디에서나 사용자 고유의 PC 환경을 사용할 수 있습니다."
 
 msgid "Live-Usb-Creator"
-msgstr "Live-Usb_Creator 라이브 Usb 제작"
+msgstr "라이브 USB 제작 도구"
 
-msgid "This program can create a writable live USB. So you don't waste space on the USB when creating a bootable USB from an ISO image. This is a modified version of live-usb-maker used in the MXLinux project to be used in the latest Ubuntu. A writable folder is created in the created USB, and data can be freely written in it. You can specify the percentage of space on the USB to be used."
-msgstr "이 프로그램은 쓰기 가능한 라이브 USB를 만들 수 있고 ISO 이미지로 부팅 가능한 USB를 만들 때 USB 공간을 낭비하지 않습니다. 최신 Ubuntu에서 사용하는 MXLinux 프로젝트에 사용된 live-usb-maker의 수정된 버전입니다. USB에 쓰기 가능한 폴더가 생성되고 데이터를 자유롭게 쓸 수 있습니다. USB에서 사용할 공간의 백분율을 지정할 수 있습니다."
+msgid ""
+"This program can create a writable live USB. So you don't waste space on the "
+"USB when creating a bootable USB from an ISO image. This is a modified "
+"version of live-usb-maker used in the MXLinux project to be used in the "
+"latest Ubuntu. A writable folder is created in the created USB, and data can "
+"be freely written in it. You can specify the percentage of space on the USB "
+"to be used."
+msgstr ""
+"이 프로그램은 윈도우의 Rufus 같이 쓰기 가능한 라이브 USB를 만들 수 있습니다. "
+"ISO 이미지로 부팅 가능한 USB를 만들 때 USB의 공간을 낭비하지 않게 도와줍니다. "
+"이 프로그램을 이용하면 USB에 쓰기 가능한 폴더가 생성되고 데이터를 자유롭게 쓸 수 있습니다. "
 
 msgid "KakaoTalk(Wine)"
-msgstr "카카오톡(와인)"
+msgstr "카카오톡 PC버전"
 
-msgid "KakaoTalk can be used on Linux using a wine program. KakaoTalk does not officially support the Linux version, which can be unstable."
-msgstr "카카오톡을 와인 프로그램을 이용하여 리눅스에서 사용할 수 있습니다. 카카오톡은 공식적으로 리눅스버전을 지원하지 않아 불안정 할 수 있습니다."
+msgid ""
+"KakaoTalk can be used on Linux using a wine program. KakaoTalk does not "
+"officially support the Linux version, which can be unstable."
+msgstr ""
+"카카오톡 PC버전을 리눅스에서 사용할 수 있게 도와줍니다. "
+"카카오톡은 공식적으로 리눅스버전을 지원하지 않아 불안정 할 수 있습니다."
 
 msgid "HamoniKR-Drive"
 msgstr "하모니카 드라이브"
 
-msgid "Try using the HamoniKR drive. You can save and use 2GB of data. You can link your account in the system settings."
-msgstr "하모니카 클라우드를 사용해보세요. 2GB의 자료를 저장하고 사용하실 수 있습니다. 제어판에서 계정을 연동시킬 수 있습니다."
+msgid ""
+"Try using the HamoniKR drive. You can save and use 2GB of data. You can link "
+"your account in the system settings."
+msgstr ""
+"하모니카 클라우드를 사용해보세요. 2GB의 무료 클라우드 저장소를 사용 수 있습니다. "
+"제어판에서 하모니카 드라이브 계정을 연동해서 탐색기에서 바로 연동됩니다."
 
 msgid "Editor(IDE)"
-msgstr "Editor(IDE)"
+msgstr "개발 도구(IDE)"
 
 msgid "It is an integrated development environment tool."
-msgstr "통합 개발 환경 도구 입니다."
+msgstr "소프트웨어 개발자를 위한 통합 개발 환경 도구 입니다."
 
 msgid "Visual Studio Code"
 msgstr "비주얼 스튜디오 코드"
 
-msgid "Visual Studio Code is a source-code editor that can be used with a variety of programming languages."
-msgstr "비주얼 스튜디오 코드는 다양한 프로그래밍 언어와 함께 사용할 수 있는 소스 코드 편집기 입니다."
+msgid ""
+"Visual Studio Code is a source-code editor that can be used with a variety "
+"of programming languages."
+msgstr ""
+"비주얼 스튜디오 코드는 다양한 프로그래밍 언어와 함께 사용할 수 있는 소스 코드 편집기 입니다."
 
 msgid "DBMS"
-msgstr "DBMS"
+msgstr "데이터베이스"
 
 msgid "Try using various database management systems."
 msgstr "다양한 데이터베이스 관리 시스템을 사용해 보십시오."
 
 msgid "MySQL"
-msgstr "MySQL"
+msgstr ""
 
 msgid "MySQL is an open-source relational database management system (RDBMS)."
 msgstr "MySQL은 RDBMS(오픈 소스 관계형 데이터베이스 관리 시스템)입니다"
 
 msgid "PostgreSQL"
-msgstr "PostgreSQL"
+msgstr ""
 
-msgid "PostgreSQL also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance."
-msgstr "PostgreSQL은 확장성과 SQL 표준 준수를 강조하는 자유-오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다."
+msgid ""
+"PostgreSQL also known as Postgres, is a free and open-source relational "
+"database management system (RDBMS) emphasizing extensibility and SQL "
+"compliance."
+msgstr ""
+"PostgreSQL은 확장성과 SQL 표준 준수를 강조하는 오픈소스 데이터베이스 입니다."
 
 msgid "WEB/WAS"
-msgstr "WEB/WAS"
+msgstr ""
 
 msgid "Try to build WEB and WAS servers for web services."
-msgstr "웹 서비스를 위한 WEB, WAS 서버 구축을 해보세요."
+msgstr "웹 서비스를 위한 웹 서버, WAS 서버를 쉽게 구축 해보세요."
 
 msgid "Apache"
-msgstr "아파치"
+msgstr ""
 
-msgid "The Apache HTTP Server, colloquially called Apache is a free and open-source cross-platform web server software, released under the terms of Apache License 2.0."
-msgstr "아파치 HTTP 서버(Apache HTTP Server)는 아파치 라이선스 2.0의 조항에 따라 출시된 자유-오픈 소스 크로스 플랫폼 웹 서버 소프트웨어입니다. 웹 환경을 구축하기 위해 필요합니다."
+msgid ""
+"The Apache HTTP Server, colloquially called Apache is a free and open-source "
+"cross-platform web server software, released under the terms of Apache "
+"License 2.0."
+msgstr ""
+"아파치 HTTP 서버(Apache HTTP Server)는 아파치 라이선스 2.0의 조항에 따라 출시된 "
+"오픈소스 크로스 플랫폼 웹 서버 소프트웨어입니다. 웹 사이트 환경을 구축하기 위해 필요합니다."
 
 msgid "Tomcat"
-msgstr "톰캣"
+msgstr ""
 
-msgid "Apache Tomcat is a web application server with only servlet containers developed by the Apache Software Foundation."
-msgstr "아파치 톰캣은 아파치 소프트웨어 재단에서 개발한 서블릿 컨테이너만 있는 웹 애플리케이션 서버이다."
+msgid ""
+"Apache Tomcat is a web application server with only servlet containers "
+"developed by the Apache Software Foundation."
+msgstr ""
+"아파치 톰캣은 아파치 소프트웨어 재단에서 개발한 웹 애플리케이션 서버입니다."
 
 msgid "Development Language"
-msgstr "Development Language"
+msgstr "프로그래밍 언어"
 
-msgid "Install packages related to the development language and proceed with additional settings."
-msgstr "개발 언어와 관련된 패키지를 설치하고 추가 설정을 진행합니다."
+msgid ""
+"Install packages related to the development language and proceed with "
+"additional settings."
+msgstr ""
+"프로그래밍 언어와 관련된 패키지를 설치하고 추가 설정을 진행합니다."
 
 msgid "default-jdk"
 msgstr "default-jdk"
 
 msgid "Standard Java or Java compatible Development Kit"
-msgstr "표준 Java 또는 Java 호환 개발 키트 입니다."
+msgstr "표준 Java 개발 환경을 구성하는 패키지 입니다."
 
 msgid "Python-pip"
-msgstr "Python-pip"
+msgstr ""
 
-msgid "python3.8 is already installed in the HamoniKR. However, you need to make addiional settings to use the pip command at the terminal. We recommend using the IDE tool."
-msgstr "python3.8은 이미 HamoniKR에 설치되어 있습니다. 하지만 터미널에서 pip 명령을 사용하려면 추가 설정을 해야 합니다. IDE 도구 사용을 권장합니다."
+msgid ""
+"python3.8 is already installed in the HamoniKR. However, you need to make "
+"addiional settings to use the pip command at the terminal. We recommend "
+"using the IDE tool."
+msgstr "터미널에서 파이썬 pip 명령을 사용하려면 필요한 프로그램 입니다."
 
 msgid "Etc.."
-msgstr "기타.."
+msgstr "기타..."
 
 msgid "These are very useful tools that can be used for development."
-msgstr "개발할 때 사용할 수 있는 매우 유용한 추가 도구입니다."
+msgstr "소프트웨어를 개발할 때 사용할 수 있는 매우 유용한 도구들 입니다."
 
 msgid "git"
-msgstr "깃"
+msgstr ""
 
-msgid "Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development."
-msgstr "깃은 소프트웨어 개발 중에 소스 코드를 공동으로 개발하는 프로그래머들 간의 작업을 조정하기 위해 사용되는 파일 집합의 변경을 추적하는 소프트웨어 입니다."
+msgid ""
+"Git is software for tracking changes in any set of files, usually used for "
+"coordinating work among programmers collaboratively developing source code "
+"during software development."
+msgstr ""
+"깃은 소프트웨어 개발 중에 소스코드를 공동으로 개발하는 프로그래머들 간의 "
+"작업을 유연하게 관리하기 위해 사용되는 소스코드 형상관리 도구입니다."
 
 msgid "rabbitvcs-nemo"
-msgstr "rabbitvcs-nemo"
+msgstr "파일탐색기 git 확장기능"
 
-msgid "Rabbitvcs is a tool that helps you manage versions of projects such as git. This software enables rabbitvcs in nemo file browser."
-msgstr "Rabbitvcs는 git과 같은 프로젝트의 버전을 관리할 수 있게 도와주는 도구입니다. 이 소프트웨어는 니모 파일 브라우저에서 rabbitvcs를 사용할 수 있게 합니다."
+msgid ""
+"Rabbitvcs is a tool that helps you manage versions of projects such as git. "
+"This software enables rabbitvcs in nemo file browser."
+msgstr ""
+"이 소프트웨어는 파일 탐색기에서 Git, SVN 등의 형상관리 도구를 사용할 수 있게 합니다."
 
 msgid "Avahi Service"
-msgstr "Avahi Service"
+msgstr ""
 
-msgid "Avahi is a system which enables programs to publish and discover services and hosts running on a local network. This package is a package that enables clients to browse services even if they do not know IP."
-msgstr "Avahi는 프로그램이 로컬 네트워크에서 실행되는 서비스와 호스트를 게시하고 검색할 수 있도록 하는 시스템입니다. 이 패키지는 클라이언트가 IP를 모르더라도 서비스를 찾아볼 수 있도록 하는 패키지 입니다."
+msgid ""
+"Avahi is a system which enables programs to publish and discover services "
+"and hosts running on a local network. This package is a package that enables "
+"clients to browse services even if they do not know IP."
+msgstr ""
+"로컬 네트워크에서 실행되는 서비스와 호스트를 게시하고 검색할 수 있도록 하는 프로그램입니다. "
+"이 프로그램은 클라이언트가 IP를 모르더라도 로컬 네트워크에 있는 "
+" 네트워크 프린터, NAS, 서버 또는 PC 등을 찾아볼 수 있도록 환경을 구성합니다."
 
 msgid "Development Program"
 msgstr "개발자용 프로그램"
@@ -479,22 +582,33 @@ msgid "HamoniKR Information"
 msgstr "하모니카 정보"
 
 msgid "Lutris"
-msgstr "루트리스"
+msgstr ""
 
-msgid "Lutris is an Open Source gaming platform for Linux. You can install game and other window program."
-msgstr "루트리스는 리눅스에서 윈도우 프로그램을 간단하게 설치, 실행할 수 있도록 도와주는 와인 기반 오픈소스 프로그램 입니다."
+msgid ""
+"Lutris is an Open Source gaming platform for Linux. You can install game and "
+"other window program."
+msgstr ""
+"루트리스는 하모니카에서 윈도우 프로그램을 간단하게 설치하고 실행할 수 있도록 도와줍니다"
+"다양한 버전의 Wine 을 쉽게 관리할 수 있고 직관적인 설정을 제공합니다."
 
 msgid "Asbru-cm (SSH Client)"
-msgstr "Asbru-cm (SSH Client)"
+msgstr ""
 
-msgid "Asbru Connection Manager is a user interface that helps organizing remote terminal sessions and automating repetitive tasks."
-msgstr "Asbru-cm (SSH Client)연결 관리자는 원격 터미널 세션을 구성하고 반복 작업을 자동화하는데 도움을 주는 프로그램입니다."
+msgid ""
+"Asbru Connection Manager is a user interface that helps organizing remote "
+"terminal sessions and automating repetitive tasks."
+msgstr ""
+"텔넷, SSH 서버 등 원격 터미널 세션을 구성하고 저장된 세션을 관리할 수 있는 SSH 클라이언트 입니다."
 
 msgid "KODI"
-msgstr "코디"
+msgstr ""
 
-msgid "Kodi is a free and open-source media player software application developed by the XBMC Foundation, a non-profit technology consortium."
-msgstr "코디는 비영리 기술 컨소시엄인 XBMC 재단이 개발한 자유-오픈 소스 미디어 플레이어 응용 소프트웨어입니다. 다양한 영상을 보거나 애드온을 연결해서 사용해보세요."
+msgid ""
+"Kodi is a free and open-source media player software application developed "
+"by the XBMC Foundation, a non-profit technology consortium."
+msgstr ""
+"전 세계적으로 IPTV 또는 셋탑박스에 많이 사용되고 있는 미디어센터 소프트웨어입니다. "
+"다양한 영상을 보거나 애드온을 연결해서 활용해 보세요."
 
 msgid "Korean Language"
 msgstr "한국어 설정"
@@ -505,46 +619,61 @@ msgstr "설치"
 msgid "Site"
 msgstr "이동"
 
+msgid "Visit the forums"
+msgstr "포럼 방문하기"
 
+msgid "Download the user guide (PDF)"
+msgstr "사용자 설명서 다운로드 (PDF)"
 
-#~ msgid "Visit the forums"
-#~ msgstr "포럼 방문하기"
+msgid "Read the release notes"
+msgstr "릴리즈 노트 읽기"
 
-#~ msgid "Download the user guide (PDF)"
-#~ msgstr "사용자 설명서 다운로드 (PDF)"
+msgid "Make a donation"
+msgstr "기부하기"
 
-#~ msgid "Read the release notes"
-#~ msgstr "릴리즈 노트 읽기"
+msgid "Get involved"
+msgstr "참여하기"
 
-#~ msgid "Make a donation"
-#~ msgstr "기부하기"
+msgid "Become a sponsor"
+msgstr "스폰서 되기"
 
-#~ msgid "Get involved"
-#~ msgstr "참여하기"
+msgid "Connect to the chat room"
+msgstr "대화방(IRC)에 접속하기"
 
-#~ msgid "Become a sponsor"
-#~ msgstr "스폰서 되기"
+msgid "Contribute to Linux Mint"
+msgstr "리눅스 민트 돕기"
 
-#~ msgid "Connect to the chat room"
-#~ msgstr "대화방(IRC)에 접속하기"
-
-#~ msgid "Contribute to Linux Mint"
-#~ msgstr "리눅스 민트 돕기"
-
-#~ msgid "Browse the list of new features"
-#~ msgstr "새로운 기능 둘러보기"
+msgid "Browse the list of new features"
+msgstr "새로운 기능 둘러보기"
 
 #, python-format
-#~ msgid "Discover %s"
-#~ msgstr "%s 둘러보기"
+msgid "Discover %s"
+msgstr "%s 둘러보기"
 
-#~ msgid "Find help"
-#~ msgstr "도움 받기"
+msgid "Find help"
+msgstr "도움 받기"
 
-#~ msgid ""
-#~ "Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
-#~ "as much as we did making it. Please make yourself familiar with the new "
-#~ "features and the documentation and don't hesitate to send us your feedback."
-#~ msgstr ""
-#~ "리눅스 민트를 선택해주셔서 감사합니다. 저희가 즐겁게 준비한 만큼 즐겁게 사용해주셨으면 합니다. 새로운 기능과 문서들을 둘러보시고 궁금한 "
-#~ "점이나 문제가 있다면 곧바로 저희를 찾아주십시오."
+msgid ""
+"Welcome and thank you for choosing Linux Mint. We hope you'll enjoy using it "
+"as much as we did making it. Please make yourself familiar with the new "
+"features and the documentation and don't hesitate to send us your feedback."
+msgstr ""
+"리눅스 민트를 선택해주셔서 감사합니다. 저희가 즐겁게 준비한 만큼 즐겁게 사용"
+"해주셨으면 합니다. 새로운 기능과 문서들을 둘러보시고 궁금한 점이나 문제가 있"
+"다면 곧바로 저희를 찾아주십시오."
+
+#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3307
+msgid "Battle.net"
+msgstr "배틀넷"
+
+#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3324
+msgid "Battle.net can be used on Linux using a wine program."
+msgstr "배틀넷을 설치해서 게임을 즐기세요. 게임에 최적화된 윈도우 가상환경을 제공됩니다."
+
+#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3415
+msgid "League of Legends"
+msgstr "리그 오브 레전드(LOL)"
+
+#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3432
+msgid "League of Legends can be used on Linux using a wine program."
+msgstr "리그 오브 레전드 (League of Legends)는 인기 있는 온라인 멀티플레이어 배틀 아레나 게임입니다."

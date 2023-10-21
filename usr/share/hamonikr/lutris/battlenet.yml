@@ -1,0 +1,126 @@
+description: Blizzard Battle.net
+game_slug: battlenet
+gogslug: ''
+humblestoreid: ''
+installer_slug: blizzard-battlenet-standard
+name: Blizzard Battle.net
+notes: "**CONFIGURE AND INSTALL THE DEPENDENCIES FIRST**\r\n- Instructions for Vulkan\
+  \ support: \r\nhttps://github.com/lutris/docs/blob/master/InstallingDrivers.md\r\
+  \n- Instructions to install 32 bits libraries dependencies:\r\nhttps://github.com/lutris/docs/blob/master/WineDependencies.md\r\
+  \n- Instructions for proper functionality of Battle.Net (+ common problems)\r\n\
+  https://github.com/lutris/docs/blob/master/Battle.Net.md\r\n- If you encounter issues\
+  \ with this script installer, please report them on Lutris Discord server, channel\
+  \ #lutris_support"
+runner: wine
+script:
+  files:
+  - setup:
+      filename: Battle.net-Setup.exe
+      url: https://www.battle.net/download/getInstallerForGame?os=win&version=LIVE&gameProgram=BATTLENET_APP
+  game:
+    arch: win64
+    exe: drive_c/Program Files (x86)/Battle.net/Battle.net Launcher.exe
+    prefix: $GAMEDIR
+  installer:
+  - task:
+      arch: win64
+      description: Creating 64bit Wine prefix.
+      name: create_prefix
+      prefix: $GAMEDIR
+  - task:
+      app: arial
+      arch: win64
+      description: Installing Arial font
+      name: winetricks
+      prefix: $GAMEDIR
+  - task:
+      app: tahoma
+      arch: win64
+      description: Installing Tahoma font
+      name: winetricks
+      prefix: $GAMEDIR
+  - task:
+      arch: win64
+      description: Setting Windows 10 mode for Wine
+      key: Version
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine
+      prefix: $GAMEDIR
+      value: win10
+  - task:
+      arch: win64
+      description: 'Wine Staging: Enabling DXVA2'
+      key: backend
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine\DXVA2
+      prefix: $GAMEDIR
+      value: va
+  - task:
+      arch: win64
+      description: needed for Warcraft III Reforged
+      key: version
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine\AppDefaults\BlizzardBrowser.exe
+      prefix: $GAMEDIR
+      type: REG_SZ
+      value: win7
+  - task:
+      arch: win64
+      description: Korean Input method patch  
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine\X11 Driver
+      key: inputStyle
+      value: root
+      type: REG_SZ      
+  - write_json:
+      data:
+        Client:
+          GameLaunchWindowBehavior: '2'
+          GameSearch:
+            BackgroundSearch: 'true'
+          HardwareAcceleration: 'false'
+          Install:
+            DownloadLimitNextPatchInBps: '0'
+          Sound:
+            Enabled: 'false'
+          Streaming:
+            StreamingEnabled: 'false'
+        Games:
+          s2:
+            AdditionalLaunchArguments: -Displaymode 1
+      description: Disabling Sound/Hardware Acceleration/Streaming in Blizzard App
+      file: $GAMEDIR/drive_c/users/$USER/AppData/Roaming/Battle.net/Battle.net.config
+  - merge:
+      dst: $GAMEDIR/drive_c/
+      src: setup
+  - execute:
+      command: WINEESYNC=1 WINEPREFIX=$GAMEDIR $WINEBIN $GAMEDIR/drive_c/Battle.net-Setup.exe
+      description: 'Installing Blizzard App
+
+        ------------------------------
+
+        Do not attempt to login to Battle.net, once Battle.net has finished installing
+        and the login window appears, simply close it. You will log in the next time
+        you start the app.'
+  - task:
+      name: winekill
+      prefix: $GAMEDIR
+  system:
+    env:
+      DXVK_HUD: compiler
+      DXVK_STATE_CACHE_PATH: $GAMEDIR
+      STAGING_SHARED_MEMORY: 1
+      __GL_SHADER_DISK_CACHE: 1
+      __GL_SHADER_DISK_CACHE_PATH: $GAMEDIR
+      __GL_SHADER_DISK_CACHE_SKIP_CLEANUP: 1
+      exclude_processes: Agent.exe "Battle.net Helper.exe"
+  wine:
+    battleye: false
+    eac: false
+    fsr: false
+    override:
+      locationapi: d
+slug: blizzard-battlenet-standard
+steamid: null
+version: Standard
+year: 1996

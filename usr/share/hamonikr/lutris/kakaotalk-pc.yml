@@ -1,9 +1,15 @@
-name: KakaoTalk
+name: KakaoTalk for PC
 game_slug: kakaotalk
-version: KakaoTalk Install
+version: KakaoTalk for PC
 slug: kakaotalk
 runner: wine
-
+description: 카카오톡 PC버전 (KakaoTalk for PC)
+notes: "
+  카카오톡 설치 시 문제가 있으면 도움말(F1) 또는 하모니카 커뮤니티를 이용하세요. \r\  
+  \n- 카카오톡 설치가 완료되면 카카오톡에 로그인을 시도하지 마세요. \r\
+  \n- 로그인 창이 나타나면 그냥 닫으세요. \r\
+  \n- Lutris 의 모든 설치 과정이 끝난 후 다음번에 로그인하세요. \r\ 
+  "
 script:
   files:
   - kakaotalk_download_sh: http://pkg.hamonikr.org/download.sh
@@ -20,6 +26,8 @@ script:
       name: create_prefix
       prefix: $GAMEDIR
   - task:
+      arch: win32
+      description: Korean Input method patch    
       name: set_regedit
       path: HKEY_CURRENT_USER\Software\Wine\X11 Driver
       key: inputStyle
@@ -44,4 +52,4 @@ script:
   system:
     exclude_processes: KaKaoTalk.exe
   wine:
-    version: lutris-fshack-7.2-x86_64
+    version: lutris-ge-lol-p8-12-x86_64

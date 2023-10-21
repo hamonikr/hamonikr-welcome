@@ -1,0 +1,29 @@
+이 문서는 프로그램 수정 후 번역 파일을 어떻게 처리하는 지 설명합니다.
+
+# ui 파일로 부터 번역할 문구를 추출하는 법
+# 
+# https://askubuntu.com/questions/218432/how-extract-strings-from-a-ui-file-glade-with-gettext
+
+1) 아래 멸령은 ui 파일에서 번역할 텍스트를 추출하여 mintwelcome.pot 파일 새로 생성
+
+xgettext -k_ -kN_ -L Glade -o mintwelcome-new.pot ../usr/share/linuxmint/mintwelcome/*.ui            
+
+
+# msgmerge는 입력파일.pot의 원본 메시지를 입력파일.po의 번역 메시지와 병합하여 최종 PO 파일을 생성.
+
+2) 새로 업데이트한 pot 파일의 내용을 기존 po 파일에 업데이트
+
+여기서 출력파일.po는 최종 PO 파일의 이름을 나타내며, 
+입력파일.pot은 번역되지 않은 원본 메시지가 포함 된 POT 파일이고, 
+입력파일.po는 기존의 번역된 PO 파일입니다. 
+
+ex) msgmerge -o 출력파일.po 입력파일.pot 입력파일.po
+
+msgmerge -o mintwelcome-en-new.po mintwelcome-new.pot mintwelcome-en.po
+
+msgmerge -o mintwelcome-ko-new.po mintwelcome-new.pot mintwelcome-ko.po
+
+
+3) *-new.po 파일을 번역 후 이전 파일들을 삭제.
+
+4) 삭제 후 *-new.po 파일들의 이름을 이전 파일들의 이름으로 변경

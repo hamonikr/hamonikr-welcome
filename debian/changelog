@@ -1,3 +1,14 @@
+hamonikr-welcome (3.3.3) kumkang; urgency=medium
+
+  [Kevin Kim]
+  * Add battle net, lol support
+   - Added lutris yaml
+   - Updated translation
+   - Add icons and scripts for new applications
+  * Add exception handling
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 22 Oct 2023 00:10:18 +0900
+
 hamonikr-welcome (3.3.2) kumkang; urgency=medium
 
   [Kevin Kim]

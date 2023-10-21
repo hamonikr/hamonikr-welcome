@@ -11,15 +11,15 @@ if [[ $? != 0 ]]; then
 fi
 
 # 중복 실행 방지
-if [ -f /tmp/kakaotalkworking ]; then
+if [ -f /tmp/lolkworking ]; then
   zenity --info --width 200 --text "인스톨러가 실행중입니다."
   exit 0
 else
-  touch /tmp/kakaotalkworking
+  touch /tmp/lolworking
 fi
 
 # 강제 종료 되거나 작업 완료 되었을때 진행
-trap 'rm /tmp/kakaotalkworking' EXIT
+trap 'rm /tmp/lolworking' EXIT
 
 # lutris 설치 확인
 CHECK=$(dpkg -l | grep lutris)
@@ -34,24 +34,24 @@ fi
 
 if [ ! -z "$CHECK" ]; then
   # lutris 에서 설치
-  if [ -d "/home/$RUID/Games/kakaotalk" ]; then
-    zenity --info --width 350 --text "이미 설치되어 있습니다.\n/home/$RUID/Games/kakaotalk\n폴더를 제거하고 다시 실행해주세요"
+  if [ -d "/home/$RUID/Games/league-of-legends" ]; then
+    zenity --info --width 350 --text "이미 설치되어 있습니다.\n/home/$RUID/Games/league-of-legends\n폴더를 제거하고 다시 실행해주세요"
     exit 0
   else
-    if [ ! -f "/usr/share/hamonikr/lutris/kakaotalk-pc.yml" ] ; then
-      sudo wget -O /usr/share/hamonikr/lutris/kakaotalk-pc.yml https://raw.githubusercontent.com/hamonikr/hamonikr-welcome/master/usr/share/hamonikr/lutris/kakaotalk-pc.yml
+    if [ ! -f "/usr/share/hamonikr/lutris/lol-korean.yml" ] ; then
+      sudo wget -O /usr/share/hamonikr/lutris/lol-korean.yml https://raw.githubusercontent.com/hamonikr/hamonikr-welcome/master/usr/share/hamonikr/lutris/lol-korean.yml
     fi
-    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/kakaotalk-pc.yml
+    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/lol-korean.yml
   fi
 else
 
-  if zenity --question --width 350 --text="카카오톡을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?"; then
+  if zenity --question --width 350 --text="프로그램을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?"; then
     
     sudo add-apt-repository -y ppa:lutris-team/lutris
     sudo apt update
     sudo apt install -y lutris
 
-    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/kakaotalk-pc.yml
+    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/lol-korean.yml
 
   else
     # 설치 취소

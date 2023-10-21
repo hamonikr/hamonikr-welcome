@@ -110,16 +110,18 @@ class MintWelcome():
         builder.get_object("button_license").connect("clicked", self.visit, "http://confluence.invesume.com/pages/viewpage.action?pageId=41779300")
 
         # custom recommended software
-        # builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
+        builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
         builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
-        builder.get_object("button_kakaotalk").connect("clicked", self.launch, "kakaotalk-install")
+        builder.get_object("button_kakaotalk").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/kakaotalk-install")
+        builder.get_object("button_battlenet").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/battlenet-install")
+        builder.get_object("button_lol").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/lol-install")
         builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
         builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
         builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
         builder.get_object("button_hamonikr_drive").connect("clicked", self.visit, "https://drive.hamonikr.org/")
         builder.get_object("button_lutris").connect("clicked", self.on_button_lutris_clicked)
-        # builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
-        # builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
+        builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
+        builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
         
 
         ### ---------- development software start ---------- ###
@@ -222,6 +224,11 @@ class MintWelcome():
             # Hide hamonikr-drive
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_4")) 
             builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
+            # Hide kodi
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_12"))
+            # Hide lutris
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_10"))
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_ventoy"))                          
 
         # Construct the stack switcher
         list_box = builder.get_object("list_navigation")
@@ -460,13 +467,69 @@ class MintWelcome():
         subprocess.Popen(["pkexec", command])
 
     def on_button_lutris_clicked (self, button):
-        os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris' && apt install -y lutris")
+        # Lutris가 설치되어 있는지 확인
+        is_installed = os.system("dpkg-query -W -f='${Status}' lutris 2>/dev/null | grep -q 'ok installed'")
+        
+        # Lutris가 설치되어 있지 않은 경우에만 설치 명령을 실행
+        if is_installed != 0:
+            os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update && apt install -y lutris'")
+        else:
+            toplevel = button.get_toplevel()
+            if toplevel.is_toplevel():
+                dialog = Gtk.MessageDialog(
+                    transient_for=toplevel,
+                    flags=0,
+                    message_type=Gtk.MessageType.INFO,
+                    buttons=Gtk.ButtonsType.OK,
+                    text="Already installed",
+                )
+                dialog.format_secondary_text(
+                    "You don't need to install it again."
+                )
+                dialog.run()
+                dialog.destroy()
 
     def on_button_vscode_clicked (self, button):
-        os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code")
-    
+        is_installed = os.system("dpkg-query -W -f='${Status}' code 2>/dev/null | grep -q 'ok installed'")
+        
+        if is_installed != 0:
+            os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code")
+        else:
+            toplevel = button.get_toplevel()
+            if toplevel.is_toplevel():
+                dialog = Gtk.MessageDialog(
+                    transient_for=toplevel,
+                    flags=0,
+                    message_type=Gtk.MessageType.INFO,
+                    buttons=Gtk.ButtonsType.OK,
+                    text="Already installed",
+                )
+                dialog.format_secondary_text(
+                    "You don't need to install it again."
+                )
+                dialog.run()
+                dialog.destroy()
+
     def on_button_kodi_clicked (self, button):
-        os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y' && apt install -y kodi")
+        is_installed = os.system("dpkg-query -W -f='${Status}' kodi 2>/dev/null | grep -q 'ok installed'")
+        
+        if is_installed != 0:
+            os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y' && apt install -y kodi")
+        else:
+            toplevel = button.get_toplevel()
+            if toplevel.is_toplevel():
+                dialog = Gtk.MessageDialog(
+                    transient_for=toplevel,
+                    flags=0,
+                    message_type=Gtk.MessageType.INFO,
+                    buttons=Gtk.ButtonsType.OK,
+                    text="Already installed",
+                )
+                dialog.format_secondary_text(
+                    "You don't need to install it again."
+                )
+                dialog.run()
+                dialog.destroy()
 
     def on_button_korean_language (self, button):
         os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")

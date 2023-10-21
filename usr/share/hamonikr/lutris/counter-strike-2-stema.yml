@@ -1,0 +1,15 @@
+game_slug: counter-strike-2
+gogslug: ''
+humblestoreid: ''
+installer_slug: counter-strike-steam
+name: Counter-Strike 2
+description: 'Counter Strike 2 (Steam Game in Lutris)'
+notes: "It will be install Steam library and Game."
+runner: steam
+script:
+  game:
+    appid: 730
+slug: counter-strike-steam
+steamid: 10
+version: Counter Strike 2
+year: 2000
