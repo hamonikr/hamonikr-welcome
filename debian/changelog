@@ -1,3 +1,28 @@
+hamonikr-welcome (3.3.6) stable; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR 7.0
+   - Update introduction
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 22 Oct 2023 02:59:38 +0900
+
+hamonikr-welcome (3.3.5) stable; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR 7.0
+   - Add logic to check before execution, if already registered PPAs
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 12 Oct 2023 10:20:09 +0900
+
+hamonikr-welcome (3.3.4) stable; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR 7.0
+   - Added exception handling
+   - Update for Ubuntu and HamoniKR 7.0 
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 11 Oct 2023 15:47:50 +0900
+
 hamonikr-welcome (3.3.3) kumkang; urgency=medium
 
   [Kevin Kim]

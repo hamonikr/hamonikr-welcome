@@ -293,15 +293,16 @@ msgstr "하모니카에 오신 것을 환영합니다"
 msgid "Welcome to your new operating system!"
 msgstr ""
 "하모니카는 데스크톱 사용자에게 최적화된 다양한 편의성을 제공하는 개방형 운영체제로\n"
-"최근까지 국내 26개 공공 및 민간 부문에서 40만명 이상이 사용하고 있으며\n"
-"20만건 이상의 사용자 다운로드가 제공된 신뢰할 수 있는 운영체제 입니다."
+"최근까지 국내 26개 공공 및 민간 부문에서 40만명 이상이 사용하고 있으며,\n"
+"GS인증 1등급 및 SW품질대상 최우수상을 수상한 신뢰할 수 있는 운영체제 입니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:42
 msgid ""
 "This welcome screen will guide you through your first steps, show you how to "
 "find help and where to get more information about HamoniKR."
 msgstr ""
-"다양한 최신 하드웨어를 지원하고 있으며 2032년까지 안정적인 기능 및 보안 업데이트를 제공합니다."
+"하모니카는 다양한 최신 하드웨어를 지원하는 HWE 버전과 \n"
+"2032년까지 안정적인 기능 및 보안 업데이트를 제공하는 LTS 버전을 제공하고 있습니다."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:43
 msgid ""
@@ -311,17 +312,16 @@ msgid ""
 msgstr ""
 "  - 개인이나 기업 누구에게나 모든 프로그램을 무료로 제공\n"
 "  - 어디서나 빠른 실행을 돕는 퀵 런처 (Alt + Space)\n"
-"  - 한글 HWP, MS 오피스 등의 다양한 문서 작업 가능\n"
-"  - 카카오톡, 슬랙, 줌 등 원활한 비대면 업무 환경 제공\n"
+"  - 한글 HWP, MS 오피스 등의 다양한 문서 편집 가능\n"
+"  - 카카오톡, 슬랙, 줌 등 원활한 비대면 업무를 위한 도구\n"
 "  - 드롭박스, 메가드라이브, 구글 드라이브 등 클라우드 환경 지원\n"
-"  - 소프트웨어 매니저를 통한 6만여개의 다양한 소프트웨어 제공."
+"  - 소프트웨어 매니저를 통한 6만여개의 다양한 소프트웨어."
 
 #: usr/share/linuxmint/mintwelcome/mintwelcome.ui.h:44
 msgid "Have a great time and don't hesitate to send us your feedback."
 msgstr ""
-"국내 최대의 오픈소스 커뮤니티 하모니카(https://hamonikr.org)와\n"
-"하모니카 유튜브 채널(https://youtube.com/hamonikros)을 통해\n"
-"언제든 사용 중 궁금한 점을 쉽게 해결할 수 있으며, 기업이나 개인 누구나 무료로 사용할 수 있습니다."
+"사용 중 궁금한 점이 생기면, 국내 최대의 오픈소스 커뮤니티 하모니카(https://hamonikr.org)와 \n"
+"하모니카 유튜브 채널(https://youtube.com/hamonikros)을 통해 쉽게 해결할 수 있습니다."
 
 # #### new hamonikr-welcome translate ######
 msgid "HamoniKR Settings"
