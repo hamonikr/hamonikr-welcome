@@ -228,7 +228,7 @@ class MintWelcome():
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_4")) 
             builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
             # Hide kodi
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_12"))
+            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_12"))
             # Hide lutris
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_10"))
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_ventoy"))                          
@@ -483,7 +483,8 @@ class MintWelcome():
         
         # Lutris가 설치되어 있지 않은 경우에만 설치 명령을 실행
         if is_installed != 0:
-            os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update && apt install -y lutris'")
+            # os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update && apt install -y lutris'")
+            os.system("gnome-terminal -- bash -c \"pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update && apt install -y lutris'\"")
         else:
             toplevel = button.get_toplevel()
             if toplevel.is_toplevel():
@@ -504,7 +505,8 @@ class MintWelcome():
         is_installed = os.system("dpkg-query -W -f='${Status}' code 2>/dev/null | grep -q 'ok installed'")
         
         if is_installed != 0:
-            os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code")
+            # os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code")
+            os.system("gnome-terminal -- bash -c \"pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code'\"")
         else:
             toplevel = button.get_toplevel()
             if toplevel.is_toplevel():
@@ -525,7 +527,9 @@ class MintWelcome():
         is_installed = os.system("dpkg-query -W -f='${Status}' kodi 2>/dev/null | grep -q 'ok installed'")
         
         if is_installed != 0:
-            os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y' && apt install -y kodi")
+            # os.system("pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y && apt install -y kodi'")
+            os.system("gnome-terminal -- bash -c \"pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y && apt install -y kodi'\"")
+
         else:
             toplevel = button.get_toplevel()
             if toplevel.is_toplevel():

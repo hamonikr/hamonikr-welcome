@@ -1,3 +1,13 @@
+hamonikr-welcome (3.3.7) stable; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR 7.0
+   - Add exception handling code
+   - Show kodi part
+   - show install process into terminal, because long time waiting.
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 23 Oct 2023 19:59:46 +0900
+
 hamonikr-welcome (3.3.6) stable; urgency=medium
 
   [Kevin Kim]
