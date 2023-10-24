@@ -1,0 +1,94 @@
+name: Kiwoom Hero4 (영웅문 4)
+description: Kiwoom Hero4 (영웅문 4)
+notes: "
+  \n- 프로그램 설치 후 바로 실행하지 마시고 종료한 후 Lutris 의 모든 설치 과정이 끝난 후\r\
+  \n  Lutris 에서 바로가기 아이콘을 만들고 실행하시기 바랍니다. \r\ 
+  "
+game_slug: kiwoomhero4
+gogslug: ''
+humblestoreid: ''
+installer_slug: kiwoomhero4
+
+runner: wine
+
+script:
+  files:
+  - kiwoom_installer: https://download.kiwoom.com/kiwoomhero4/KiwoomHero4Setup.exe
+  game:
+    arch: win64
+    exe: drive_c/KiwoomHero4/bin/nkstarter.exe
+    prefix: $GAMEDIR
+  installer:
+  - task:
+      arch: win64
+      description: Creating 64bit Wine prefix.
+      name: create_prefix
+      prefix: $GAMEDIR
+  - task:
+      arch: win64
+      description: Setting Windows 10 mode for Wine
+      key: Version
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine
+      prefix: $GAMEDIR
+      value: win10
+  - task:
+      arch: win64
+      description: 'Wine Staging: Enabling DXVA2'
+      key: backend
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine\DXVA2
+      prefix: $GAMEDIR
+      value: va
+  - task:
+      arch: win64
+      description: Korean Input method patch  
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine\X11 Driver
+      key: inputStyle
+      value: root
+      type: REG_SZ      
+  - task:
+      app: arial
+      arch: win64
+      description: Installing Arial font
+      name: winetricks
+      prefix: $GAMEDIR
+  - task:
+      app: tahoma
+      arch: win64
+      description: Installing Tahoma font
+      name: winetricks
+      prefix: $GAMEDIR    
+  - task:
+      args: $kiwoom_installer
+      description: "영웅문 4 설치
+
+        ------------------------------
+
+                  프로그램 설치 후 바로 실행하지 마시고 종료하세요.
+        Lutris 의 모든 설치 과정이 끝난 후 바로가기 아이콘을 만들고 실행하시기 바랍니다."
+      executable: $GAMEDIR/drive_c/windows/explorer.exe
+      include_processes: explorer.exe
+      name: wineexec      
+  - task:
+      name: winekill
+      prefix: $GAMEDIR
+  system:
+    env:
+      DXVK_LOG_LEVEL: none
+      DXVK_STATE_CACHE_PATH: $GAMEDIR
+      STAGING_SHARED_MEMORY: 1
+      WINE_LARGE_ADDRESS_AWARE: 1
+      __GL_SHADER_DISK_CACHE: 1
+      __GL_SHADER_DISK_CACHE_PATH: $GAMEDIR
+  wine:
+    MouseWarpOverride: enable
+    dgvoodoo2: true
+    override:
+      locationapi: d
+    version: lutris-ge-lol-p8-12-x86_64
+slug: kiwoomhero4
+steamid: null
+version: Standard
+year: 2023

@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-21 22:44+0900\n"
+"POT-Creation-Date: 2023-10-24 14:34+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,87 +17,87 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:71
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:71
 msgid "Welcome"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:144
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:144
 msgid "Desktop Colors"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:161
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:161
 msgid ""
 "First, make yourself at home. Choose your favorite color and whether you "
 "prefer a light or a dark desktop theme."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:501
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:501
 msgid "Select Theme"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:518
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:518
 msgid "Choose your favorite theme."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:551
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:551
 msgid "Traditional"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:579
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:579
 msgid "It's a traditional Windows theme."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:612
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:612
 msgid "Modern"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:639
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:639
 msgid "Windows theme with panels on top."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:668
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:668
 msgid ""
 "Note: Cinnamon will restart after you choose a new theme. Any customization "
 "you made to the theme will be lost."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:735
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:735
 msgid "System Snapshots"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:752
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:752
 msgid ""
 "Next, let's set automatic system snapshots. A minimum of two daily and two "
 "boot snapshots are recommended. If anything breaks, you can then restore "
 "your computer to its previous working state."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:764
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:869
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:974
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1079
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1184
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1289
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1394
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1532
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1638
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1744
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1850
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2235
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2341
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2447
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2553
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2802
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2909
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3016
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:764
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:869
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:974
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1079
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1184
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1289
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1394
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1532
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1638
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1744
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1850
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2235
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2341
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2447
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2553
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2802
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2909
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3016
 msgid "Launch"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:840
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:840
 msgid "Driver Manager"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:857
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:857
 msgid ""
 "Check the Driver Manager to see if it recommends any additional drivers for "
 "your computer. Most hardware components are recognized by the Linux kernel "
@@ -104,99 +105,99 @@ msgid ""
 "require proprietary drivers to be recognized or to work better."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:945
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:945
 msgid "Multimedia Codecs"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:962
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:962
 msgid ""
 "Additional multimedia codecs are required to support some formats and to "
 "play popular audio, video and web content. Click the button below to install "
 "them."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1050
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1050
 msgid "Update Manager"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1067
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1067
 msgid ""
 "The little shield icon in your system tray is your Update Manager. It "
 "provides software updates, security updates and kernel updates to fix bugs, "
 "keep your computer safe and support newer hardware components."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1155
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1155
 msgid "System Settings"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1172
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1172
 msgid ""
 "Have a look at the system settings and configure your operating system the "
 "way you like. Don't hesitate to customize it and make it feel like home."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1260
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1260
 msgid "Software Manager"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1277
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1277
 msgid ""
 "There are about 60,000 applications available. HamoniKR comes with the bare "
 "minimum to get you started. The Software Manager is there if you're looking "
 "for more."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1365
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1365
 msgid "Firewall"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1382
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1382
 msgid "Control and monitor network traffic by enabling the firewall."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1503
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1503
 msgid "HamoniKR Help"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1520
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1520
 msgid ""
 "The HamoniKR help site provides wats to solve various problems. You can move "
 "to the site by pressing the Launch button or press F1 to check."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1609
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1609
 msgid "Shortcut Keys"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1626
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1626
 msgid ""
 "Try the shortcut key in the HamoniKR. It's very useful. Also make your own "
 "custom shortcut key. If you press Lanuch button, you can check the default "
 "shortcut key. Press again to exit"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1715
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1715
 msgid "HamoniKR Community"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1732
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1732
 msgid ""
 "The HamoniKR forums are the best place to find help. Join thousands of "
 "users, search topics and threads and find solutions to your problems."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1821
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1821
 msgid "Slack Chanel"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1838
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1838
 msgid ""
 "You can also connect to the Slack Chanel and chat with users who are "
 "currently online. Ask a question, maybe someone there knows the solution?"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1886
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1886
 msgid ""
 "HamoniKR has a great community. Many users will welcome you with open arms "
 "and be delighted to help you. Make sure to be patient and respectful with "
@@ -204,7 +205,7 @@ msgid ""
 "when someone helps you."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1900
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1900
 msgid ""
 "If you have a bad experience with another user, try to solve it responsibly "
 "or contact the moderation team. Although we can't guarantee everyone will "
@@ -212,106 +213,108 @@ msgid ""
 "constructive discussions."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1962
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1962
 msgid "Welcome to HamoniKR"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:1999
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:1999
 msgid "Welcome to your new operating system!"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2020
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2020
 msgid ""
 "This welcome screen will guide you through your first steps, show you how to "
 "find help and where to get more information about HamoniKR."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2034
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2034
 msgid ""
 "On behalf of the development team and everyone involved in the project, we'd "
 "like to thank you for choosing HamoniKR. We hope you'll enjoy using it as "
 "much as we enjoy working on it."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2048
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2048
 msgid "Have a great time and don't hesitate to send us your feedback."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2206
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2206
 msgid "New Features"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2223
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2223
 msgid ""
 "Click the button below to discover the new features introduced in this "
 "version of HamoniKR."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2312
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2312
 msgid "Release Notes"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2329
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2329
 msgid ""
 "Click the button below to read about known bugs, limitations and workarounds "
 "for this version of HamoniKR."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2418
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2418
 msgid "Package License"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2435
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2435
 msgid "You can check the package license in the HamoniKR OS."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2524
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2524
 msgid "Contribute"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2541
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2541
 msgid ""
 "HamoniKR is a great open source project in Korea. It is open to anyone who "
 "wants to participate. There are many ways to help. Click the button below to "
 "see how you can get involved."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2666
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2666
 msgid "Hancom-Office 2022 Beta"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2683
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2683
 msgid ""
 "Hancom-Office 2022 Beta Install Support. The license copyright is owned by "
 "Hancom. It can be end at any time."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2695
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3123
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3229
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3336
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3444
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3657
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3771
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4042
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4148
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4311
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4417
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4583
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4749
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4855
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5021
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5127
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5233
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5339
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2695
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3123
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3229
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3336
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3444
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3552
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3660
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3873
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3987
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4258
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4364
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4527
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4633
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4799
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4965
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5071
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5237
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5343
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5449
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5555
 msgid "Install"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2773
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2773
 msgid "Ventoy"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2790
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2790
 msgid ""
 "Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/"
 "VHD(x)/EFI files. With ventoy, you don't need to format the disk over and "
@@ -319,22 +322,22 @@ msgid ""
 "drive and boot them directly."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2880
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2880
 msgid "SystemBack"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2897
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2897
 msgid ""
 "Easily backup and store your own PC environment in use. You can use your own "
 "PC environment wherever you are by creating a USB set as your own "
 "environment."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:2987
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:2987
 msgid "Live-Usb-Creator"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3004
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3004
 msgid ""
 "This program can create a writable live USB. So you don't waste space on the "
 "USB when creating a bootable USB from an ISO image. This is a modified "
@@ -344,224 +347,240 @@ msgid ""
 "to be used."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3094
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3094
 msgid "Site-Compatibility-Support"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3111
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3111
 msgid ""
 "It supports public institutions and banks to use public certificates. Reboot "
 "is required after installation."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3200
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3200
 msgid "KakaoTalk(Wine)"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3217
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3217
 msgid ""
 "KakaoTalk can be used on Linux using a wine program. KakaoTalk does not "
 "officially support the Linux version, which can be unstable."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3307
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3307
 msgid "Battle.net"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3324
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3324
 msgid "Battle.net can be used on Linux using a wine program."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3415
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3415
 msgid "League of Legends"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3432
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3432
 msgid "League of Legends can be used on Linux using a wine program."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3522
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3523
+msgid "Kiwoom Hero 4"
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3540
+msgid "Kiwoom Hero 4 can be used on Linux using a wine program."
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3631
+msgid "Samsung POP HTS"
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3648
+msgid "Samsung POP HTS can be used on Linux using a wine program."
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3738
 msgid "HamoniKR-Drive"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3539
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3755
 msgid ""
 "Try using the HamoniKR drive. You can save and use 2GB of data. You can link "
 "your account in the system settings."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3551
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3767
 msgid "Site"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3628
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3844
 msgid "Lutris"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3645
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3861
 msgid ""
 "Lutris is an Open Source gaming platform for Linux. You can install game and "
 "other window program."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3734
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3950
 msgid "KODI"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3751
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3967
 msgid ""
 "Kodi is a free and open-source media player software application developed "
 "by the XBMC Foundation, a non-profit technology consortium."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3789
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4005
 msgid "Korean Language"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3934
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4150
 msgid "Development Language"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3951
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4167
 msgid ""
 "Install packages related to the development language and proceed with "
 "additional settings."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4013
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4229
 msgid "Default-JDK"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4030
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4246
 msgid "Standard Java or Java compatible Development Kit"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4119
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4335
 msgid "Python-pip"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4136
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4352
 msgid ""
 "python3.8 is already installed in the HamoniKR. However, you need to make "
 "addiional settings to use the pip command at the terminal. We recommend "
 "using the IDE tool."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4203
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4419
 msgid "WEB/WAS"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4220
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4436
 msgid "Try to build WEB and WAS servers for web services."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4282
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4498
 msgid "Apache"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4299
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4515
 msgid ""
 "The Apache HTTP Server, colloquially called Apache is a free and open-source "
 "cross-platform web server software, released under the terms of Apache "
 "License 2.0."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4388
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4604
 msgid "Tomcat"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4405
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4621
 msgid ""
 "Apache Tomcat is a web application server with only servlet containers "
 "developed by the Apache Software Foundation."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4475
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4691
 msgid "Editor(IDE)"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4492
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4658
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4708
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4874
 msgid "It is an integrated development environment tool."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4554
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4770
 msgid "Visual Studio Code"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4571
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4787
 msgid ""
 "Visual Studio Code is a source-code editor that can be used with a variety "
 "of programming languages."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4641
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4857
 msgid "DBMS"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4720
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4936
 msgid "MySQL"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4737
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:4953
 msgid "MySQL is an open-source relational database management system (RDBMS)."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4826
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5042
 msgid "PostgreSQL"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4843
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5059
 msgid ""
 "PostgreSQL also known as Postgres, is a free and open-source relational "
 "database management system (RDBMS) emphasizing extensibility and SQL "
 "compliance."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4913
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5129
 msgid "Etc.."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4930
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5146
 msgid "These are very useful tools that can be used for development."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:4992
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5208
 msgid "Asbru-cm (SSH Client)"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5009
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5225
 msgid ""
 "Asbru Connection Manager is a user interface that helps organizing remote "
 "terminal sessions and automating repetitive tasks."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5098
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5314
 msgid "git"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5115
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5331
 msgid ""
 "Git is software for tracking changes in any set of files, usually used for "
 "coordinating work among programmers collaboratively developing source code "
 "during software development."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5204
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5420
 msgid "rabbitvcs-nemo"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5221
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5437
 msgid ""
 "Rabbitvcs is a tool that helps you manage versions of projects such as git. "
 "This software enables rabbitvcs in nemo file browser."
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5310
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5526
 msgid "Avahi Service"
 msgstr ""
 
-#: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:5327
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:5543
 msgid ""
 "Avahi is a system which enables programs to publish and discover services "
 "and hosts running on a local network. This package is a package that enables "

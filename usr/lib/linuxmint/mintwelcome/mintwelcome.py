@@ -126,7 +126,10 @@ class MintWelcome():
         builder.get_object("button_lutris").connect("clicked", self.on_button_lutris_clicked)
         builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
         builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
-        
+
+        # Add Kiwoom Here 4, Samsung POP HTS
+        builder.get_object("button_kiwoomhero4").connect("clicked", self.pkexec, "/usr/lib/linuxmint/mintwelcome/kiwoomhero4-install")
+        builder.get_object("button_pophts").connect("clicked", self.pkexec, "/usr/lib/linuxmint/mintwelcome/pophts-install")
 
         ### ---------- development software start ---------- ###
         

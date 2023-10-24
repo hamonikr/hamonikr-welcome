@@ -1,0 +1,102 @@
+#!/bin/bash
+
+# SPDX-License-Identifier: MIT
+
+# Program Information
+# Program Name: Kiwoom Hero4 (영웅문 4) Installer
+# Description: This script installs Kiwoom Hero4 (영웅문 4) on a Linux system using Lutris.
+# Version: 1.0
+# Author: Kevin Kim
+# Date: 2023.10.23
+
+# 필요한 명령어 체크 및 설치
+commands=("awk" "who" "nslookup" "zenity" "dpkg" "wget" "sudo" "add-apt-repository" "apt")
+for cmd in "${commands[@]}"; do
+  if ! command -v $cmd &> /dev/null; then
+    zenity --info --width 200 --text "$cmd 명령어가 없습니다. 설치를 진행합니다."
+    sudo apt update
+    sudo apt install -y $cmd
+  fi
+done
+
+# 사용자 ID 확인
+RUID=$(who | awk 'FNR == 1 {print $1}')
+# 사용자 ID가 없는 경우 에러 메시지 출력
+if [ -z "$RUID" ]; then
+  zenity --error --width 200 --text "사용자 ID를 확인할 수 없습니다."
+  exit 1
+fi
+
+# 인터넷 연결상태 확인
+nslookup www.google.com | grep authoritative > /dev/null 2>&1
+# 인터넷 연결이 없는 경우 정보 메시지 출력
+if [[ $? != 0 ]]; then
+  zenity --info --width 200 --text "인터넷 연결상태를 확인해주세요"
+  exit 1
+fi
+
+# 중복 실행 방지
+if [ -f /tmp/kiwoomhero4-working ]; then
+  zenity --info --width 200 --text "인스톨러가 실행중입니다."
+  exit 1
+else
+  touch /tmp/kiwoomhero4-working
+fi
+
+# 강제 종료 되거나 작업 완료 되었을때 파일 삭제
+trap 'rm /tmp/kiwoomhero4-working' EXIT
+
+
+# # libvulkan1:i386 설치 상태 확인
+# CHECK=$(dpkg -l | grep libvulkan1:i386)
+# CHECK_ii=$(dpkg -l | grep libvulkan1:i386 | grep -o ii)
+
+# # libvulkan1:i386 패키지가 정상적이지 않은 경우
+# if [ ! -z "$CHECK_ii" ]; then
+#   sudo add-apt-repository ppa:graphics-drivers/ppa
+#   sudo dpkg --add-architecture i386 && sudo apt update 
+#   sudo apt install -y wine32 nvidia-driver-535 libvulkan1 libvulkan1:i386
+# fi
+
+# lutris 설치 상태 확인
+CHECK=$(dpkg -l | grep lutris)
+CHECK_iHR=$(dpkg -l | grep lutris | grep -o iHR)
+
+# lutris 패키지가 정상적이지 않은 경우
+if [ ! -z "$CHECK_iHR" ]; then
+  # 사용자에게 패키지 제거 동의 여부를 묻는다.
+  if zenity --question --width 300 --text "lutris 패키지가 정상적이지 않습니다.\n강제로 제거하시겠습니까?"; then
+    dpkg --configure -a
+    # 패키지 제거 실패 시 에러 메시지 출력
+    if ! sudo dpkg --remove --force-remove-reinstreq lutris; then
+      zenity --error --width 300 --text "lutris 패키지 제거에 실패했습니다."
+      exit 1
+    fi
+  else
+    exit 1
+  fi
+fi
+
+if [ ! -z "$CHECK" ]; then
+  # lutris 에서 설치
+  if [ -d "/home/$RUID/Games/kiwoomhero4" ]; then
+    zenity --info --width 350 --text "이미 설치되어 있습니다.\n/home/$RUID/Games/kiwoomhero4\n폴더를 제거하고 다시 실행해주세요"
+    exit 1
+  else
+    if [ ! -f "/usr/share/hamonikr/lutris/kiwoomhero4.yml" ] ; then
+      sudo mkdir -p /usr/share/hamonikr/lutris
+      sudo wget -O /usr/share/hamonikr/lutris/kiwoomhero4.yml https://raw.githubusercontent.com/hamonikr/hamonikr-welcome/master/usr/share/hamonikr/lutris/kiwoomhero4.yml
+    fi
+    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/kiwoomhero4.yml
+  fi
+else
+  if zenity --question --width 350 --text="프로그램을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?"; then
+    sudo add-apt-repository -y ppa:lutris-team/lutris
+    sudo apt update
+    sudo apt install -y lutris
+    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/kiwoomhero4.yml
+  else
+    # 설치 취소
+    exit 1;
+  fi
+fi

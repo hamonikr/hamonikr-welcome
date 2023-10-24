@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -539,9 +540,6 @@ msgid ""
 "as much as we did making it. Please make yourself familiar with the new "
 "features and the documentation and don't hesitate to send us your feedback."
 msgstr ""
-""
-""
-""
 
 #: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3307
 msgid "Battle.net"
@@ -557,4 +555,20 @@ msgstr ""
 
 #: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3432
 msgid "League of Legends can be used on Linux using a wine program."
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3523
+msgid "Kiwoom Hero 4"
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3540
+msgid "Kiwoom Hero 4 can be used on Linux using a wine program."
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3631
+msgid "Samsung POP HTS"
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3648
+msgid "Samsung POP HTS can be used on Linux using a wine program."
 msgstr ""

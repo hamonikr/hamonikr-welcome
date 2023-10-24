@@ -677,3 +677,19 @@ msgstr "리그 오브 레전드(LOL)"
 #: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3432
 msgid "League of Legends can be used on Linux using a wine program."
 msgstr "리그 오브 레전드 (League of Legends)는 인기 있는 온라인 멀티플레이어 배틀 아레나 게임입니다."
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3523
+msgid "Kiwoom Hero 4"
+msgstr "키움증권 영웅문 4"
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3540
+msgid "Kiwoom Hero 4 can be used on Linux using a wine program."
+msgstr "키움증권 영웅문 4를 윈도우 가상 환경으로 설치합니다"
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3631
+msgid "Samsung POP HTS"
+msgstr "삼성증권 POP HTS"
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3648
+msgid "Samsung POP HTS can be used on Linux using a wine program."
+msgstr "삼성증권 POP HTS를 윈도우 가상 환경으로 설치합니다"

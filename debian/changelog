@@ -1,3 +1,10 @@
+hamonikr-welcome (3.3.8) stable; urgency=medium
+
+  [Kevin Kim]
+  * Add Kiwoom Hero 4(영웅문4)
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 24 Oct 2023 14:15:16 +0900
+
 hamonikr-welcome (3.3.7) stable; urgency=medium
 
   [Kevin Kim]
