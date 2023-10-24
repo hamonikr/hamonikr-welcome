@@ -1,49 +1,34 @@
 description: league-of-legends 한국어 버전
+notes: "
+  * 게임 클라이언트의 다운로드가 끝나면 로그인 하시지 말고 창을 닫으세요. \r\  
+  \n* 그리고 시스템 트레이의 라이엇 클라이언트를 종료해야 설치가 완료됩니다.\r\
+  "
 game_slug: league-of-legends
 gogslug: ''
 humblestoreid: ''
 installer_slug: league-of-legends-standard-kr-region-1
 name: League of Legends
-notes: ''
 runner: wine
 script:
   files:
   - lol_installer: https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.kr.exe
   game:
-    args: --locale=$INPUT_LOCALE --launch-product=league_of_legends --launch-patchline=live
+    args: --locale=ko_KR --launch-product=league_of_legends --launch-patchline=live
     exe: $GAMEDIR/drive_c/Riot Games/Riot Client/RiotClientServices.exe
     prefix: $GAMEDIR
   installer:
-  - input_menu:
-      description: 'Choose your preferred game''s language:'
-      id: LOCALE
-      options:
-      - ko_KR: '한국어'
-      - cs_CZ: "\u010Ce\u0161tina"
-      - en_AU: English AUS
-      - en_GB: English U.K.
-      - en_US: English U.S.
-      - fr_FR: "Fran\xE7ais"
-      - de_DE: Deutsch
-      - es_ES: "Espa\xF1ol"
-      - es_MX: "Espa\xF1ol Mexicano"
-      - it_IT: Italiano
-      - ja_JP: "\u65E5\u672C\u8A9E"
-      - hu_HU: Magyar
-      - pl_PL: Polski
-      - pt_BR: "Portugu\xEAs do Brasil"
-      - ro_RO: Romanian
-      - ru_RU: "\u0440\u0443\u0441\u0441\u043A\u0438\u0439"
-      - tr_TR: "T\xFCrk\xE7e"
-      preselect: ko_KR
   - task:
       description: Creating Wine prefix
       name: create_prefix
       prefix: $GAMEDIR
   - task:
       args: $lol_installer
-      description: Do not log in during installation, just close the installation
-        client once it finishes downloading.
+      description: '설치 안내
+
+      ---
+
+      게임 클라이언트의 다운로드가 끝나면 로그인 하시지 말고 창을 닫으세요.
+      그리고 시스템 트레이의 라이엇 클라이언트를 종료해야 설치가 완료됩니다.'
       executable: $GAMEDIR/drive_c/windows/explorer.exe
       include_processes: explorer.exe
       name: wineexec
