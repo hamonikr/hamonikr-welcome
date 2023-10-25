@@ -10,5 +10,6 @@ Package: hamonikr-welcome
 Architecture: all
 Depends: ${misc:Depends},
 Replaces: mintwelcome, mint-translations
-Description: change mintwelcome to hamonikrwelcome
- 민트웰컴을 하모니카웰컴으로 변경하는 패키지
+Recommends: hamonikr-fonts
+Description: HamoniKR Welcome App
+ 하모니카 사용자 환경을 지원하는 패키지

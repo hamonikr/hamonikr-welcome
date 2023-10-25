@@ -677,3 +677,6 @@ msgstr "리그 오브 레전드(LOL)"
 #: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3432
 msgid "League of Legends can be used on Linux using a wine program."
 msgstr "리그 오브 레전드 (League of Legends)는 인기 있는 온라인 멀티플레이어 배틀 아레나 게임입니다."
+
+msgid "install guide"
+msgstr "설치 도움말 보기"

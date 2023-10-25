@@ -4,19 +4,18 @@ gogslug: ''
 humblestoreid: ''
 installer_slug: blizzard-battlenet-standard
 name: Blizzard Battle.net
-notes: "**CONFIGURE AND INSTALL THE DEPENDENCIES FIRST**\r\n- Instructions for Vulkan\
-  \ support: \r\nhttps://github.com/lutris/docs/blob/master/InstallingDrivers.md\r\
-  \n- Instructions to install 32 bits libraries dependencies:\r\nhttps://github.com/lutris/docs/blob/master/WineDependencies.md\r\
-  \n- Instructions for proper functionality of Battle.Net (+ common problems)\r\n\
-  https://github.com/lutris/docs/blob/master/Battle.Net.md\r\n- If you encounter issues\
-  \ with this script installer, please report them on Lutris Discord server, channel\
-  \ #lutris_support"
+notes: "** 설치 전 확인하세요 **\r\n- Vulkan 드라이버 설치 유무\
+  \ 가이드라인: \r\nhttps://github.com/lutris/docs/blob/master/InstallingDrivers.md\r\
+  \n- 32 bits 라이브러리 의존성 해결:\r\nhttps://github.com/lutris/docs/blob/master/WineDependencies.md\r\
+  \n- Battle.Net 가상 환경에 대한 이슈\r\n\
+  https://github.com/lutris/docs/blob/master/Battle.Net.md\
+  "
 runner: wine
 script:
   files:
   - setup:
       filename: Battle.net-Setup.exe
-      url: https://www.battle.net/download/getInstallerForGame?os=win&version=LIVE&gameProgram=BATTLENET_APP
+      url: https://downloader.battle.net/download/getInstallerForGame?os=win&gameProgram=BATTLENET_APP&version=Live
   game:
     arch: win64
     exe: drive_c/Program Files (x86)/Battle.net/Battle.net Launcher.exe
@@ -95,13 +94,12 @@ script:
       src: setup
   - execute:
       command: WINEESYNC=1 WINEPREFIX=$GAMEDIR $WINEBIN $GAMEDIR/drive_c/Battle.net-Setup.exe
-      description: 'Installing Blizzard App
+      description: 'Blizzard 배틀넷 설치
 
         ------------------------------
 
-        Do not attempt to login to Battle.net, once Battle.net has finished installing
-        and the login window appears, simply close it. You will log in the next time
-        you start the app.'
+        설치가 끝난 후 로그인 창이 나타나면, 로그인 하지 마시고 창을 닫으세요
+        Lutris 설치가 완료된 후 다시 실행해서 로그인 하시면 됩니다.'
   - task:
       name: winekill
       prefix: $GAMEDIR

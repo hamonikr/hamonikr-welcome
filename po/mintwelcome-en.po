@@ -558,3 +558,6 @@ msgstr ""
 #: /home/hamonikr/workspaces/hamonikr-welcome/usr/share/linuxmint/mintwelcome/mintwelcome.ui:3432
 msgid "League of Legends can be used on Linux using a wine program."
 msgstr ""
+
+msgid "install guide"
+msgstr ""

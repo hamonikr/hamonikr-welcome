@@ -118,7 +118,9 @@ class MintWelcome():
         builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/kakaotalk-install")
         builder.get_object("button_battlenet").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/battlenet-install")
+        builder.get_object("battlenet_install_guide").connect("clicked", self.on_button_battlenet_install_guide)
         builder.get_object("button_lol").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/lol-install")
+        builder.get_object("lol_install_guide").connect("clicked", self.on_button_lol_install_guide)
         builder.get_object("button_ventoy").connect("clicked", self.visit, "apt://ventoy?refresh=yes")
         builder.get_object("button_systemback").connect("clicked", self.visit, "apt://systemback?refresh=yes")
         builder.get_object("button_live_usb_creator").connect("clicked", self.visit, "apt://live-usb-creator?refresh=yes")
@@ -126,6 +128,8 @@ class MintWelcome():
         builder.get_object("button_lutris").connect("clicked", self.on_button_lutris_clicked)
         builder.get_object("button_kodi").connect("clicked", self.on_button_kodi_clicked)
         builder.get_object("button_korean_language").connect("clicked", self.on_button_korean_language)
+
+        
         
 
         ### ---------- development software start ---------- ###
@@ -548,6 +552,12 @@ class MintWelcome():
 
     def on_button_korean_language (self, button):
         os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")
+
+    def on_button_battlenet_install_guide (self, button):
+            os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-7.0/key-features/game/battlenet'")
+
+    def on_button_lol_install_guide (self, button):
+            os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-7.0/key-features/game/lol'")
 
 if __name__ == "__main__":
     MintWelcome()
