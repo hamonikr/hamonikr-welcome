@@ -43,12 +43,6 @@ script:
       arch: win32
       args: /ALLUSERS /VERYSILENT
       description: "카카오톡 PC버전을 설치합니다."
-      notes: "
-        카카오톡 설치 시 문제가 있으면 도움말(F1) 또는 하모니카 커뮤니티를 이용하세요. \r\  
-        \n- 카카오톡 설치 마지막의 카카오톡 바로 실행하기 체크를 해제하세요.\r\
-        \n- 만약 로그인 창이 나타나면 그냥 닫으신 후 트레이의 카카오톡을 종료해주세요. \r\
-        \n- Lutris 의 모든 설치 과정이 끝난 후, 바로가기 아이콘을 만들고 로그인 하시기 바랍니다. \r\ 
-        "
       executable: $CACHE/KakaoTalk_Setup.exe
       name: wineexec
       prefix: $GAMEDIR

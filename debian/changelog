@@ -1,3 +1,10 @@
+hamonikr-welcome (3.4.0) stable; urgency=medium
+
+  [Kevin Kim]
+  * Fixed kakaotalk install process
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 15 Nov 2023 16:24:08 +0900
+
 hamonikr-welcome (3.3.9) stable; urgency=medium
 
   [Kevin Kim]
