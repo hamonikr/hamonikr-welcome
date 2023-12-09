@@ -115,6 +115,7 @@ class MintWelcome():
 
         # custom recommended software
         builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
+        builder.get_object("button_v3lite").connect("clicked", self.visit, "apt://ahnlab-v3lite?refresh=yes")
         builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/kakaotalk-install")
         builder.get_object("button_battlenet").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/battlenet-install")

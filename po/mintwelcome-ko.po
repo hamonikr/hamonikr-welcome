@@ -392,6 +392,19 @@ msgstr ""
 "한컴오피스 2022 베타 설치 지원. 라이선스 저작권은 한글과 컴퓨터에게 있습니다. "
 "한글과 컴퓨터의 배포 정책에 따라 설치 지원이 종료될 수 있습니다."
 
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3271
+msgid "V3 lite"
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3288
+msgid ""
+"V3 Lite is a revolutionary free antivirus based on a multi-dimensional "
+"analysis platform that is lighter and adds a variety of powerful security "
+"features to provide a revolutionary level of personal PC security."
+msgstr ""
+"V3 Lite는 다차원 분석 플랫폼 기반의 혁신적인 무료 백신으로, 더 가볍고 다양하고"
+"강력한 보안 기능을 추가하여 혁신적인 수준의 개인용 PC 보안을 제공합니다."
+
 msgid "Ventoy"
 msgstr "Ventoy 차세대 부팅 USB 제작 도구"
 

@@ -340,6 +340,17 @@ msgid ""
 "officially support the Linux version, which can be unstable."
 msgstr ""
 
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3271
+msgid "V3 lite"
+msgstr ""
+
+#: ../usr/share/linuxmint/mintwelcome/mintwelcome.ui:3288
+msgid ""
+"V3 Lite is a revolutionary free antivirus based on a multi-dimensional "
+"analysis platform that is lighter and adds a variety of powerful security "
+"features to provide a revolutionary level of personal PC security."
+msgstr ""
+
 msgid "HamoniKR-Drive"
 msgstr ""
 
