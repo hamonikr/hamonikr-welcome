@@ -1,3 +1,13 @@
+hamonikr-welcome (3.4.2) stable; urgency=medium
+
+  [Kevin Kim]
+  * Changed wine version
+   - Bug : https://hamonikr.org/Free_Board/131013
+  * Changed show lutris install process on terminal
+   - because of process required long time
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 15 Dec 2023 13:49:16 +0900
+
 hamonikr-welcome (3.4.1) stable; urgency=medium
 
   [Kevin Kim]

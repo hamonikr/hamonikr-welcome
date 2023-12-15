@@ -45,13 +45,15 @@ if [ ! -z "$CHECK" ]; then
   fi
 else
 
-  if zenity --question --width 350 --text="카카오톡을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?"; then
+  if zenity --question --width 350 --text="카카오톡을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?\n\nlitrus 설치를 위해 터미널이 열리면 비밀번호를 입력하세요."; then
     
-    sudo add-apt-repository -y ppa:lutris-team/lutris
-    sudo apt update
-    sudo apt install -y lutris
-
-    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/kakaotalk-pc.yml
+    gnome-terminal -- bash -c "\
+    sudo add-apt-repository -y ppa:lutris-team/lutris; \
+    sudo apt update; \
+    sudo apt install -y lutris; \
+    sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/kakaotalk-pc.yml; \
+    sleep 2; \
+    exit"
 
   else
     # 설치 취소
