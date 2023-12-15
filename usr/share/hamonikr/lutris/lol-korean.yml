@@ -65,7 +65,7 @@ script:
   wine:
     MouseWarpOverride: enable
     dgvoodoo2: true
-    version: wine-ge-lol-8-26
+    version: wine-ge-lol-8-27-x86_64
 slug: league-of-legends-standard-kr-region-1
 steamid: 20590
 version: League of Legends Korean Version
