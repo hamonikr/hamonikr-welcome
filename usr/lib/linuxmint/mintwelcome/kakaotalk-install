@@ -51,6 +51,7 @@ else
     sudo add-apt-repository -y ppa:lutris-team/lutris; \
     sudo apt update; \
     sudo apt install -y lutris; \
+    sudo apt install -y hamonikr-fonts; \
     sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/kakaotalk-pc.yml; \
     sleep 2; \
     exit"
