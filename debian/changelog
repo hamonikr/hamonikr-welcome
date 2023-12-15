@@ -1,6 +1,14 @@
 hamonikr-welcome (3.4.3) stable; urgency=medium
 
   [Kevin Kim]
+  * Changed wine version to wine-ge-lol-8-26
+   - For LoL Game
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 15 Dec 2023 15:09:21 +0900
+
+hamonikr-welcome (3.4.3) stable; urgency=medium
+
+  [Kevin Kim]
   * Add hamonikr-fonts pkg for lite version
    - Include fake-gulim for Korean
 
