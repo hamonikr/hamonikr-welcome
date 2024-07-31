@@ -1686,7 +1686,7 @@
                             <property name="can-focus">False</property>
                             <property name="halign">center</property>
                             <property name="pixel-size">48</property>
-                            <property name="icon-name">hamonikr-logo2</property>
+                            <property name="icon-name">hamonikr-community</property>
                             <property name="icon_size">6</property>
                           </object>
                           <packing>
