@@ -9,7 +9,7 @@ Standards-Version: 4.1.4
 Package: hamonikr-welcome
 Architecture: all
 Depends: ${misc:Depends},
-Replaces: mintwelcome, mint-translations
+Replaces: mintwelcome, mint-translations, hamonikr-themes
 Recommends: hamonikr-fonts
 Description: HamoniKR Welcome App
  하모니카 사용자 환경을 지원하는 패키지
