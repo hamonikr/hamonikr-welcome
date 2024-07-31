@@ -100,8 +100,8 @@ class MintWelcome():
         builder.get_object("button_contribute").connect("clicked", self.visit, "https://github.com/hamonikr")
         builder.get_object("button_irc").connect("clicked", self.visit, "https://hamonikr.org/how_join")
         builder.get_object("button_codecs").connect("clicked", self.visit, "apt://mint-meta-codecs?refresh=yes")
-        builder.get_object("button_new_features").connect("clicked", self.visit, "https://docs.hamonikr.org/new-features/")
-        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://docs.hamonikr.org/release-note/")
+        builder.get_object("button_new_features").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-8.0#new_feature")
+        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-8.0#release_note")
         builder.get_object("button_mintupdate").connect("clicked", self.launch, "mintupdate")
         builder.get_object("button_mintinstall").connect("clicked", self.launch, "mintinstall")
         builder.get_object("button_timeshift").connect("clicked", self.pkexec, "timeshift-gtk")
@@ -111,7 +111,7 @@ class MintWelcome():
         builder.get_object("button_layout_new").connect("clicked", self.on_button_layout_clicked, LAYOUT_STYLE_NEW)
         
         # custom new features
-        builder.get_object("button_license").connect("clicked", self.visit, "http://confluence.invesume.com/pages/viewpage.action?pageId=41779300")
+        builder.get_object("button_license").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-8.0/license")
 
         # custom recommended software
         builder.get_object("button_hancom").connect("clicked", self.launch, "hoffice-support")
@@ -160,7 +160,7 @@ class MintWelcome():
         ### ---------- development software end ---------- ###
 
         # custom help
-        builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-7.0")
+        builder.get_object("button_help").connect("clicked", self.visit, "https://docs.hamonikr.org/hamonikr-8.0")
         builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
         # builder.get_object("button_hamonikr_cli_tools").connect("clicked", self.visit, "apt://hamonikr-cli-tools?refresh=yes")
 
@@ -555,10 +555,10 @@ class MintWelcome():
         os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")
 
     def on_button_battlenet_install_guide (self, button):
-            os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-7.0/key-features/game/battlenet'")
+            os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-8.0/key-features/game/battlenet'")
 
     def on_button_lol_install_guide (self, button):
-            os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-7.0/key-features/game/lol'")
+            os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-8.0/key-features/game/lol'")
 
 if __name__ == "__main__":
     MintWelcome()
