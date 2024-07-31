@@ -44,7 +44,7 @@ class MintWelcome():
         builder.add_from_file('/usr/share/linuxmint/mintwelcome/mintwelcome.ui')
 
         window = builder.get_object("main_window")
-        window.set_icon_name("mintwelcome")
+        window.set_icon_name("hamonikr-community")
         window.set_position(Gtk.WindowPosition.CENTER)
         window.connect("destroy", Gtk.main_quit)
 

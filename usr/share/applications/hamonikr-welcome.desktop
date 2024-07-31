@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=/usr/lib/linuxmint/mintwelcome/mintwelcome.py  
-Icon=hamonikr-logo
+Icon=hamonikr-community
 Terminal=false
 Type=Application
 Encoding=UTF-8
