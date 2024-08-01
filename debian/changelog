@@ -1,3 +1,11 @@
+hamonikr-welcome (3.4.7) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Release for hamonikr 8
+   - Change logo
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 01 Aug 2024 18:31:56 +0900
+
 hamonikr-welcome (3.4.6) stable; urgency=medium
 
   [Kevin Kim]
