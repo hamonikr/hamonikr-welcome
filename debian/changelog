@@ -1,3 +1,11 @@
+hamonikr-welcome (3.4.8) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Fix shortcut image on desktop
+  * Add os icon
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 01 Aug 2024 19:06:39 +0900
+
 hamonikr-welcome (3.4.7) unstable; urgency=medium
 
   [Kevin Kim]
