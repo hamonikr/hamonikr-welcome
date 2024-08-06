@@ -218,25 +218,25 @@ class MintWelcome():
             builder.get_object("box_documentation").remove(builder.get_object("box_new_features"))
             builder.get_object("box_documentation").remove(builder.get_object("box_releasenote"))
             builder.get_object("box_documentation").remove(builder.get_object("box_pkglicense"))            
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_1"))            
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_2"))            
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_4"))            
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_10"))            
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_12"))     
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_hoffice"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_webplugin"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_hamonikrdrive"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))            
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_kodi"))     
         else:
             # 하모니카 OS 라도 7.0 이후부터 아래 패키지 중지
             # hoffice
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_1"))
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_hoffice"))
             # Hide 사이트 호환성 패키지
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_2"))
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_webplugin"))
             # Hide hamonikr-drive
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_4")) 
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_hamonikrdrive")) 
             builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
             # Hide kodi
-            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_12"))
+            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_kodi"))
             # Hide lutris
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_10"))
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_ventoy"))                          
+            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_ventoy"))                     
 
         # Construct the stack switcher
         list_box = builder.get_object("list_navigation")
@@ -483,28 +483,16 @@ class MintWelcome():
         subprocess.Popen(["pkexec", command])
 
     def on_button_lutris_clicked (self, button):
+        
         # Lutris가 설치되어 있는지 확인
         is_installed = os.system("dpkg-query -W -f='${Status}' lutris 2>/dev/null | grep -q 'ok installed'")
         
         # Lutris가 설치되어 있지 않은 경우에만 설치 명령을 실행
         if is_installed != 0:
             # os.system("pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update && apt install -y lutris'")
-            os.system("gnome-terminal -- bash -c \"pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris && apt update && apt install -y lutris'\"")
+            os.system("gnome-terminal -- bash -c \"pkexec sh -c 'add-apt-repository -y ppa:lutris-team/lutris 2>/dev/null && apt update && apt install -y lutris'\"")
         else:
-            toplevel = button.get_toplevel()
-            if toplevel.is_toplevel():
-                dialog = Gtk.MessageDialog(
-                    transient_for=toplevel,
-                    flags=0,
-                    message_type=Gtk.MessageType.INFO,
-                    buttons=Gtk.ButtonsType.OK,
-                    text="Already installed",
-                )
-                dialog.format_secondary_text(
-                    "You don't need to install it again."
-                )
-                dialog.run()
-                dialog.destroy()
+            os.system("lutris &")
 
     def on_button_vscode_clicked (self, button):
         is_installed = os.system("dpkg-query -W -f='${Status}' code 2>/dev/null | grep -q 'ok installed'")
@@ -513,20 +501,7 @@ class MintWelcome():
             # os.system("pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code")
             os.system("gnome-terminal -- bash -c \"pkexec sh -c 'wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && echo \"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main\" > /etc/apt/sources.list.d/vscode.list' && apt install -y code'\"")
         else:
-            toplevel = button.get_toplevel()
-            if toplevel.is_toplevel():
-                dialog = Gtk.MessageDialog(
-                    transient_for=toplevel,
-                    flags=0,
-                    message_type=Gtk.MessageType.INFO,
-                    buttons=Gtk.ButtonsType.OK,
-                    text="Already installed",
-                )
-                dialog.format_secondary_text(
-                    "You don't need to install it again."
-                )
-                dialog.run()
-                dialog.destroy()
+            os.system("code &")
 
     def on_button_kodi_clicked (self, button):
         is_installed = os.system("dpkg-query -W -f='${Status}' kodi 2>/dev/null | grep -q 'ok installed'")
@@ -536,20 +511,7 @@ class MintWelcome():
             os.system("gnome-terminal -- bash -c \"pkexec sh -c 'add-apt-repository -y ppa:team-xbmc/ppa && apt update -y && apt install -y kodi'\"")
 
         else:
-            toplevel = button.get_toplevel()
-            if toplevel.is_toplevel():
-                dialog = Gtk.MessageDialog(
-                    transient_for=toplevel,
-                    flags=0,
-                    message_type=Gtk.MessageType.INFO,
-                    buttons=Gtk.ButtonsType.OK,
-                    text="Already installed",
-                )
-                dialog.format_secondary_text(
-                    "You don't need to install it again."
-                )
-                dialog.run()
-                dialog.destroy()
+            os.system("kodi &")
 
     def on_button_korean_language (self, button):
         os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")

@@ -1,3 +1,11 @@
+hamonikr-welcome (3.4.9) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Recommended Program page reordering
+  * Update UI and translation
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 06 Aug 2024 12:02:56 +0900
+
 hamonikr-welcome (3.4.8) unstable; urgency=medium
 
   [Kevin Kim]

@@ -79,7 +79,7 @@ if [ ! -z "$CHECK" ]; then
   fi
 else
   if zenity --question --width 350 --text="프로그램을 설치하려면 lutris 프로그램이 필요합니다.\n설치하시겠습니까?"; then
-    sudo add-apt-repository -y ppa:lutris-team/lutris
+    sudo add-apt-repository -y ppa:lutris-team/lutris 2>/dev/null
     sudo apt update
     sudo apt install -y lutris
     sudo -u $RUID /usr/games/lutris -i /usr/share/hamonikr/lutris/battlenet.yml
