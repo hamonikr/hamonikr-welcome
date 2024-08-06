@@ -221,7 +221,7 @@ class MintWelcome():
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_hoffice"))            
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_webplugin"))            
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_hamonikrdrive"))            
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))            
+            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))            
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_kodi"))     
         else:
             # 하모니카 OS 라도 7.0 이후부터 아래 패키지 중지
