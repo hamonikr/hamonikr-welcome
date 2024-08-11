@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=welcome
+Comment=Welcome Screen
+Icon=hamonikr-community
+Exec=mintwelcome-launcher
+Terminal=false
+Type=Application
+Categories=
+

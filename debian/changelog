@@ -1,3 +1,10 @@
+hamonikr-welcome (3.5.0) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Add autostart desktop
+
+ -- HamoniKR <pkg@hamonikr.org>  Sun, 11 Aug 2024 16:43:43 +0900
+
 hamonikr-welcome (3.4.9) unstable; urgency=medium
 
   [Kevin Kim]
