@@ -2797,23 +2797,57 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="button_kakaotalk">
-                            <property name="label" translatable="yes">Launch</property>
+                          <!-- n-columns=3 n-rows=1 -->
+                          <object class="GtkGrid">
                             <property name="visible">True</property>
-                            <property name="can-focus">True</property>
-                            <property name="receives-default">True</property>
+                            <property name="can-focus">False</property>
                             <property name="halign">center</property>
-                            <property name="margin-top">3</property>
-                            <style>
-                              <class name="suggested-action"/>
-                              <class name="text-button"/>
-                            </style>
+                            <property name="column-spacing">30</property>
+                            <property name="column-homogeneous">True</property>
+                            <child>
+                              <object class="GtkButton" id="button_kakaotalk">
+                                <property name="label" translatable="yes">Install</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="margin-top">3</property>
+                                <style>
+                                  <class name="suggested-action"/>
+                                  <class name="text-button"/>
+                                </style>
+                              </object>
+                              <packing>
+                                <property name="left-attach">1</property>
+                                <property name="top-attach">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="kakaotalk_install_guide">
+                                <property name="label" translatable="yes">install guide</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">end</property>
+                                <property name="margin-top">3</property>
+                                <style>
+                                  <class name="suggested-action"/>
+                                  <class name="text-button"/>
+                                </style>
+                              </object>
+                              <packing>
+                                <property name="left-attach">2</property>
+                                <property name="top-attach">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <placeholder/>
+                            </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="pack-type">end</property>
-                            <property name="position">2</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                       </object>
@@ -2904,7 +2938,7 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="button_v3lite">
-                            <property name="label" translatable="yes">Launch</property>
+                            <property name="label" translatable="yes">Install</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -3502,7 +3536,7 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="button_ventoy">
-                            <property name="label" translatable="yes">Launch</property>
+                            <property name="label" translatable="yes">Install</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -3714,7 +3748,7 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="button_systemback">
-                            <property name="label" translatable="yes">Launch</property>
+                            <property name="label" translatable="yes">Install</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -3820,7 +3854,7 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="button_live_usb_creator">
-                            <property name="label" translatable="yes">Launch</property>
+                            <property name="label" translatable="yes">Install</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
@@ -3934,7 +3968,7 @@
                             <property name="column-homogeneous">True</property>
                             <child>
                               <object class="GtkButton" id="button_kodi">
-                                <property name="label" translatable="yes">Launch</property>
+                                <property name="label" translatable="yes">Install</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">True</property>

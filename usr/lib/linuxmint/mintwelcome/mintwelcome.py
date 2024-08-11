@@ -118,6 +118,7 @@ class MintWelcome():
         builder.get_object("button_v3lite").connect("clicked", self.visit, "apt://ahnlab-v3lite?refresh=yes")
         builder.get_object("button_site_compatibility_support").connect("clicked", self.launch, "site-compatibility-support")
         builder.get_object("button_kakaotalk").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/kakaotalk-install")
+        builder.get_object("kakaotalk_install_guide").connect("clicked", self.on_button_kakaotalk_install_guide)
         builder.get_object("button_battlenet").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/battlenet-install")
         builder.get_object("battlenet_install_guide").connect("clicked", self.on_button_battlenet_install_guide)
         builder.get_object("button_lol").connect("clicked", self.launch, "/usr/lib/linuxmint/mintwelcome/lol-install")
@@ -516,6 +517,9 @@ class MintWelcome():
     def on_button_korean_language (self, button):
         os.system("sh -c /usr/lib/linuxmint/mintwelcome/kodi_korean_support")
 
+    def on_button_kakaotalk_install_guide (self, button):
+            os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-8.0/key-features/hamonikr-welcome/kakaotalk'")
+            
     def on_button_battlenet_install_guide (self, button):
             os.system("xdg-open 'https://docs.hamonikr.org/hamonikr-8.0/key-features/game/battlenet'")
 
