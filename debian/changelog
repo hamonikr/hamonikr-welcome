@@ -1,3 +1,11 @@
+hamonikr-welcome (3.5.3) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Hide kodi install part
+  * Update screenshot for change style
+
+ -- HamoniKR <pkg@hamonikr.org>  Sat, 17 Aug 2024 14:41:00 +0900
+
 hamonikr-welcome (3.5.2) unstable; urgency=medium
 
   [Kevin Kim]

@@ -234,7 +234,7 @@ class MintWelcome():
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_hamonikrdrive")) 
             builder.get_object("button_shortcut").connect("clicked", self.launch, "conky-shortcut-on-off")
             # Hide kodi
-            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_kodi"))
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_kodi"))
             # Hide lutris
             # builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_ventoy"))                     
