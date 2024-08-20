@@ -219,7 +219,7 @@ class MintWelcome():
             builder.get_object("box_documentation").remove(builder.get_object("box_new_features"))
             builder.get_object("box_documentation").remove(builder.get_object("box_releasenote"))
             builder.get_object("box_documentation").remove(builder.get_object("box_pkglicense"))            
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_hoffice"))            
+            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_hoffice"))            
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_webplugin"))            
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_hamonikrdrive"))            
             # builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))            
@@ -227,7 +227,7 @@ class MintWelcome():
         else:
             # 하모니카 OS 라도 7.0 이후부터 아래 패키지 중지
             # hoffice
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_hoffice"))
+            # builder.get_object("box_second_steps").remove(builder.get_object("box_install_hoffice"))
             # Hide 사이트 호환성 패키지
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_webplugin"))
             # Hide hamonikr-drive
