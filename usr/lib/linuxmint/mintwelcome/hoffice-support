@@ -45,7 +45,7 @@ else
     # 2020 beta
     APP_URL="https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_hwp_2020_amd64.deb"
 
-    REPO_CHECK=$(wget -S --spider --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" ${APP_URL} 2>&1 | grep "Content-Type" | grep "application")
+    REPO_CHECK=$(wget -S --spider --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" $APP_URL 2>&1 | grep "Content-Type" | grep "application")
     if [[ -z $REPO_CHECK ]]; then
         zenity --info --width 200 --text "다운로드 저장소에 문제가 있거나 파일이 존재하지 않습니다."
         exit 0
@@ -53,7 +53,7 @@ else
 
     rm -r /tmp/hoffice_*.deb
 
-    gnome-terminal --wait -- /bin/bash -c 'echo "패키지를 다운로드 중입니다. 잠시만 기다려주세요."; sleep 3; wget -P /tmp/ --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" ${APP_URL}; echo "다운로드가 완료되었습니다." ; sleep 3; exit 0; read'
+    gnome-terminal --wait -- /bin/bash -c 'echo "패키지를 다운로드 중입니다. 잠시만 기다려주세요."; sleep 3; wget -P /tmp/ --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" '"$APP_URL"'; echo "다운로드가 완료되었습니다." ; sleep 3; exit 0; read'
 
     # 파일 체크섬 확인
     if [ -f "/tmp/hoffice_hwp_2020_amd64.deb" ]; then
