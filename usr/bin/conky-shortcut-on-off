@@ -1,10 +1,10 @@
 #!/bin/bash
 
-CHECK=$(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner" | grep -v "grep" | awk 'FNR {print $2}')
+CHECK=$(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
 
 if [ "$CHECK" = "" ]; then
     cd $HOME/.conky/hamonikr
-    conky -c "$HOME/.conky/hamonikr/banner" &
+    conky -c "$HOME/.conky/hamonikr/banner.conf" &
 else
-    kill -9 $(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner" | grep -v "grep" | awk 'FNR {print $2}')
+    kill -9 $(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
 fi

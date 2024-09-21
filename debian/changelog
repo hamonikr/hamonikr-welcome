@@ -1,3 +1,10 @@
+hamonikr-welcome (3.5.6) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Fixed conky shortcut on off
+
+ -- HamoniKR <pkg@hamonikr.org>  Sat, 21 Sep 2024 19:09:32 +0900
+
 hamonikr-welcome (3.5.5) unstable; urgency=medium
 
   [Kevin Kim]
