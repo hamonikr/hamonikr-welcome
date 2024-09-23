@@ -224,6 +224,7 @@ class MintWelcome():
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_hamonikrdrive"))            
             # builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))            
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_kodi"))     
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_lol"))
         else:
             # 하모니카 OS 라도 7.0 이후부터 아래 패키지 중지
             # hoffice
@@ -237,7 +238,9 @@ class MintWelcome():
             builder.get_object("box_second_steps").remove(builder.get_object("box_install_kodi"))
             # Hide lutris
             # builder.get_object("box_second_steps").remove(builder.get_object("box_install_lutris"))
-            builder.get_object("box_second_steps").remove(builder.get_object("box_install_ventoy"))                     
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_ventoy"))
+            # Hide LOL
+            builder.get_object("box_second_steps").remove(builder.get_object("box_install_lol"))                     
 
         # Construct the stack switcher
         list_box = builder.get_object("list_navigation")

@@ -1,3 +1,11 @@
+hamonikr-welcome (3.5.7) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Removed LOL install part
+   - Because support is stopped on Linux
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 23 Sep 2024 09:38:41 +0900
+
 hamonikr-welcome (3.5.6) unstable; urgency=medium
 
   [Kevin Kim]
