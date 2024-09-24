@@ -1,10 +1,15 @@
 #!/bin/bash
 
-CHECK=$(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
+# conky - shortcut banner
+if [ -f "$HOME/.conky/hamonikr/banner.conf" ]; then
+    is_conky_banner=$(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
 
-if [ "$CHECK" = "" ]; then
-    cd $HOME/.conky/hamonikr
-    conky -c "$HOME/.conky/hamonikr/banner.conf" &
-else
-    kill -9 $(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
-fi
+    if [ "$is_conky_banner" = "" ]; then
+        cd $HOME/.conky/hamonikr
+        conky -c "$HOME/.conky/hamonikr/banner.conf" &
+    else
+        kill -9 $(ps -ef | grep "conky -c $HOME/.conky/hamonikr/banner.conf" | grep -v "grep" | awk 'FNR {print $2}')
+        cd $HOME/.conky/hamonikr
+        conky -c "$HOME/.conky/hamonikr/banner.conf" &      
+    fi
+fi    
