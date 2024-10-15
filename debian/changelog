@@ -1,3 +1,11 @@
+hamonikr-welcome (3.4.6) stable; urgency=medium
+
+  [Kevin Kim]
+  * Fix Kakaotalk install error
+   - disable wine-mono
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 15 Oct 2024 11:08:51 +0900
+
 hamonikr-welcome (3.4.5) stable; urgency=medium
 
   [Kevin Kim]

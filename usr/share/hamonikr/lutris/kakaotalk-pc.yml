@@ -22,7 +22,7 @@ script:
       arch: win32
       description: Creating Wine prefix
       install_gecko: true
-      install_mono: true
+      install_mono: false
       name: create_prefix
       prefix: $GAMEDIR
   - task:
