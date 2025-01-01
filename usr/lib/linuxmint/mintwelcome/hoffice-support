@@ -21,15 +21,17 @@ if [ ! -z "$CHECK" ]; then
 else
 
     # 중복 실행 방지
-    if [ -f /tmp/hofficeworking ]; then
+    if [ -f "$HOME/tmp/hofficeworking" ]; then
         zenity --info --width 200 --text "인스톨러가 실행중입니다.\n중간에 종료했을 경우\n제거 후 다시 설치해주세요."
         exit 0
     else
-        touch /tmp/hofficeworking
+        # 임시 디렉토리 생성
+        mkdir -p "$HOME/tmp"
+        touch "$HOME/tmp/hofficeworking"
     fi
 
     # 강제 종료 되거나 작업 완료 되었을때 진행
-    trap 'rm /tmp/hofficeworking' EXIT
+    trap 'rm -f "$HOME/tmp/hofficeworking"' EXIT
 
 
     # 인터넷 연결상태 확인
@@ -45,38 +47,75 @@ else
     # 2020 beta
     APP_URL="https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_hwp_2020_amd64.deb"
 
-    REPO_CHECK=$(wget -S --spider --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" $APP_URL 2>&1 | grep "Content-Type" | grep "application")
-    if [[ -z $REPO_CHECK ]]; then
+    # HTTP 응답 코드로 파일 존재 여부 확인
+    REPO_CHECK=$(curl -sI -H "Host: cdn.hancom.com" -H "Referer: https://www.hancom.com/cs_center" "$APP_URL" | grep "HTTP/" | awk '{print $2}')
+    if [[ "$REPO_CHECK" != "200" ]]; then
         zenity --info --width 200 --text "다운로드 저장소에 문제가 있거나 파일이 존재하지 않습니다."
         exit 0
     fi
 
-    rm -r /tmp/hoffice_*.deb
+    rm -f "$HOME/tmp/hoffice_*.deb"
 
-    gnome-terminal --wait -- /bin/bash -c 'echo "패키지를 다운로드 중입니다. 잠시만 기다려주세요."; sleep 3; wget -P /tmp/ --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" '"$APP_URL"'; echo "다운로드가 완료되었습니다." ; sleep 3; exit 0; read'
+    # 다운로드 진행률을 보여주는 함수
+    download_with_progress() {
+        wget -P "$HOME/tmp/" --header="Host: cdn.hancom.com" --header="Referer: https://www.hancom.com/cs_center" \
+             "$APP_URL" 2>&1 | \
+        stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,index($0,"%")-2,3) }' | \
+        zenity --progress \
+            --title="Downloading" \
+            --text="Downloading hoffice..." \
+            --percentage=0 \
+            --auto-close \
+            --width=300
+    }
+
+    # 다운로드 실행
+    APP_FILE="$HOME/tmp/hoffice_hwp_2020_amd64.deb"
+    download_with_progress
 
     # 파일 체크섬 확인
-    if [ -f "/tmp/hoffice_hwp_2020_amd64.deb" ]; then
-        CHECKSUM=$(md5sum /tmp/hoffice_hwp_2020_amd64.deb | awk '{ print $1 }')
-        if [ "$CHECKSUM" != "4e460ba85ad0622bc8c1841172953991"]; then
+    if [ -f "$HOME/tmp/hoffice_hwp_2020_amd64.deb" ]; then
+        CHECKSUM=$(md5sum "$HOME/tmp/hoffice_hwp_2020_amd64.deb" | awk '{ print $1 }')
+        if [ "$CHECKSUM" != "4e460ba85ad0622bc8c1841172953991" ]; then
             zenity --info --width 200 --text "체크섬이 올바르지 않습니다. 다시 다운로드 받아주세요."
+            rm -f "$APP_FILE"
             exit 0
         fi
     fi
-    if [ -f "/tmp/hoffice_11.20.0.1520_amd64.deb" ]; then
-        CHECKSUM=$(md5sum /tmp/hoffice_11.20.0.1520_amd64.deb | awk '{ print $1 }')
-        if [ "$CHECKSUM" != "abbb954836ed930623394dd533ab899c"]; then
+    if [ -f "$HOME/tmp/hoffice_11.20.0.1520_amd64.deb" ]; then
+        CHECKSUM=$(md5sum "$HOME/tmp/hoffice_11.20.0.1520_amd64.deb" | awk '{ print $1 }')
+        if [ "$CHECKSUM" != "abbb954836ed930623394dd533ab899c" ]; then
             zenity --info --width 200 --text "체크섬이 올바르지 않습니다. 다시 다운로드 받아주세요."
+            rm -f "$APP_FILE"
             exit 0
         fi
-    fi    
-    gnome-terminal --wait -- /bin/bash -c 'echo "설치를 시작합니다 잠시만 기다려주세요."; sleep 3; dpkg -i /tmp/hoffice_*.deb; echo "설치가 완료되었습니다. 자동으로 창이 닫힙니다."; sleep 3; exit 0; read'
+    fi
+
+    # 다운로드 완료 후 gdebi-gtk로 설치
+    if [ -f "$APP_FILE" ]; then       
+        # 설치 준비 메시지 표시
+        (
+            zenity --info --text="설치 프로그램을 준비하고 있습니다...\n파일 크기가 큰 경우 시간이 소요될 수 있습니다.\n잠시만 기다려주세요." \
+                   --timeout=10 \
+                   --width=300 &
+        )            
+        # gdebi-gtk 실행
+        gdebi-gtk "$APP_FILE"
+
+        # 설치 완료 후 임시 파일 삭제
+        rm -f "$APP_FILE"
+    else
+        zenity --error --text="다운로드에 실패했습니다."
+        exit 1
+    fi
 
     # 한글 입력을 위한 nimf.so 파일 복사
     cp -r /usr/lib/linuxmint/mintwelcome/libqt5im-nimf.so /opt/hnc/hoffice11/Bin/qt/plugins/platforminputcontexts/libqt5im-nimf.so
 
-    # 작업 완료 후 파일 제거
-    rm /tmp/hoffice_*
+    # 작업 완료 후 임시 파일들 정리
+    rm -f "$HOME/tmp/hoffice_*"
+    # 임시 디렉토리가 비어있으면 삭제
+    rmdir "$HOME/tmp" 2>/dev/null
 
 fi
 

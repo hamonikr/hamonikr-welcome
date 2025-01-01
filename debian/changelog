@@ -1,3 +1,10 @@
+hamonikr-welcome (3.6.1) unstable; urgency=medium
+
+  [Kevin Kim]
+  * Fix hoffice install
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 01 Jan 2025 09:54:12 +0900
+
 hamonikr-welcome (3.6.0) unstable; urgency=medium
 
   [Kevin Kim]
