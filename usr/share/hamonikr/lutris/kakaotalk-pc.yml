@@ -52,4 +52,4 @@ script:
   system:
     exclude_processes: KaKaoTalk.exe
   wine:
-    version: lutris-fshack-7.2-x86_64
+    version: 
